@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ecotrank</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- <link href="assets/css/energy_producer.css" rel="stylesheet"> -->
+  <style>
+    .image-button {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .image-button-solar {
+        background-image: url("assets/img/solar.jpg");
+    }
+
+    .image-button-wind {
+        background-image: url("assets/img/windmill.jpg");
+    }
+
+    .image-button-storage {
+        background-image: url("assets/img/energy_storage.jpeg");
+    }
+
+    .image-button-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .image-button:hover .image-button-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .image-button-text {
+        color: white;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .image-button:hover .image-button-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    </style>
+</head>
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">ecotrank</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="">Home</a></li>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#about.html">About us</a></li>
+              <li><a href="#whoweare.html">Who we are </a></li>
+              <li><a href="#values.html">Our Values</a></li>
+              <li><a href="#history.html">Our History</a></li>
+              <li><a href="#sustain.html">Sustainability </a></li>
+              <li><a href="#management.html">Our management</a></li>
+              <li><a href="#located.html">Where we are</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="active"><span>What we do</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="energy_producer.html">Energy Producer</a></li>
+              <li><a href="service_provider.html">Service Provider </a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>News</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="blogs.html">Blogs </a></li>
+            </ul>
+          </li>
+          <li><a href="#careers">Careers</a></li>
+          <li class="dropdown"><a href="#"><span>Investors</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#overview.html">Overview</a></li>
+              <li><a href="#finance.html">Financial Results & Reports </a></li>
+              <li><a href="#Governance">Governance</a></li>
+              <li><a href="#regulated_info.html">Regulated information</a></li>
+              <li><a href="#shareholders.html">Shareholders</a></li>
+              <li><a href="#debt_finance.html">Debt & Financing</a></li>
+              <li><a href="#share_price.html">Share Price</a></li>
+              <li><a href="#informed.html">Stay Informed</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
+    </div>
+  </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title light-background">
+            <!-- <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/img/solar_vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <img src="assets/img/solar_project .jpg" class="hero-video" alt="">
+            
+            <div class="gradient-overlay-pages"></div>
+            <div class="container">
+                <h1>Operation & Maintenance</h1>
+                <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Service Provider</li>
+                    <li class="current">O&M</li>
+                </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-4">
+                    <div class="col-lg-3">
+                        <div class="card border-0 shadow">
+                            <div class="card-header bg-transparent p-0 m-0">
+                                <img src="assets/img/solar_panels_in_Africa.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3>Operation & Maintenance</h3>
+                                <p>EcoTrank is a trusted international provider of Operation & Maintenance services. From diagnostics to ongoing operational management, we ensure seamless performance. Our 24/7 real-time monitoring and control systems enable rapid response across solar, wind, biomass, hydro, and storage plants in over 20 countries.
+
+                                    <br> We also provide complete asset management services, ensuring sustainable, reliable returns on your investments while supporting a greener future.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9" data-aos="fade-up" data-aos-delay="100">
+                        <div class="row stats-row mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="col-lg-12 col-md-12 pt-4 pb-0 mb-0 text-center">
+                              <!-- Section Title -->
+                              <div class="section-title" data-aos="fade-up">
+                                <h2>Notable Metrics</h2>
+                              </div><!-- End Section Title -->
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                              <div class="stat-item">
+                                <div class="stat-icon text-center">
+                                  <i class="bi bi-activity" style="font-size: 50px;"></i>
+                                </div>
+                                <div class="stat-content text-center">
+                                  <h2>8.9 GW</h2>
+                                  <p class="mb-0" style="font-size: 12px;">operated for Ecotrank & Third parties </p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                              <div class="stat-item">
+                                <div class="stat-icon text-center">
+                                  <i class="bi bi-lightning-charge"  style="font-size: 50px;"></i>
+                                </div>
+                                <div class="stat-content text-center">
+                                  <h2>286</h2>
+                                  <p class="mb-0" style="font-size: 12px;">dedicated Maintenance specialists</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                              <div class="stat-item">
+                                <div class="stat-icon text-center">
+                                  <i class="bi bi-award"  style="font-size: 50px;"></i>
+                                </div>
+                                <div class="stat-content text-center">
+                                  <h2>10+</h2>
+                                  <p class="mb-0" style="font-size: 12px;">years of international experience</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        <div class="row py-4">
+                            <!-- Section Title -->
+                            <div class="container section-title" data-aos="fade-up">
+                                <h2>What Sets Us Apart</h2>
+                            </div><!-- End Section Title -->
+                            <!-- Employees -->
+                            <div class="col-md-4">
+                                <div class="highlight-card text-center">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-people" style="font-size: 50px;"></i>
+                                    </div>
+                                    <h5 class="highlight-header">Employees</h5>
+                                    <p class="highlight-description">
+                                        People profiles focus on long-term electrical maintenance expertise.
+                                        Voltalia employees are at the core of our operations.
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <!-- Processes -->
+                            <div class="col-md-4">
+                                <div class="highlight-card text-center">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-gear"  style="font-size: 50px;"></i>
+                                    </div>
+                                    <h5 class="highlight-header">Processes</h5>
+                                    <p class="highlight-description">
+                                        Expert resource management, training, and allocation through MMC.
+                                        Maintenance management powered by global CMMS systems.
+                                    </p>
+                                </div>
+                            </div>
+                
+                            <!-- Systems -->
+                            <div class="col-md-4">
+                                <div class="highlight-card text-center">
+                                    <div class="highlight-icon">
+                                        <i class="bi bi-laptop"  style="font-size: 50px;"></i>
+                                    </div>
+                                    <h5 class="highlight-header">Systems</h5>
+                                    <p class="highlight-description">
+                                        Advanced systems like Solar Hub (Portugal), Wind Hub (Brazil), and VoltPower System ensure
+                                        seamless operations. Customers access their data through the Energy Portal (EP).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid mt-5 light-background">
+            <h1 class="text-center mb-4">Maintenance Services</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3">
+                    <button type="button" class="image-button image-button-solar" data-bs-toggle="modal" data-bs-target="#solarModal">
+                        <div class="image-button-overlay">
+                            <span class="image-button-text">Solar</span>
+                            <i class="bi bi-arrow-right text-light" style="font-size: 30px;"></i>
+                        </div>
+                    </button>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <button type="button" class="image-button image-button-wind" data-bs-toggle="modal" data-bs-target="#windModal">
+                        <div class="image-button-overlay">
+                            <span class="image-button-text">Wind</span>
+                            <i class="bi bi-arrow-right text-light" style="font-size: 30px;"></i>
+                        </div>
+                    </button>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <button type="button" class="image-button image-button-storage" data-bs-toggle="modal" data-bs-target="#storageModal">
+                        <div class="image-button-overlay">
+                            <span class="image-button-text">Storage</span>
+                            <i class="bi bi-arrow-right text-light" style="font-size: 30px;"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Solar Modal -->
+            <div class="modal fade" id="solarModal" tabindex="-1" aria-labelledby="solarModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg"> <!-- Added classes for centering and width -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="solarModalLabel">Solar Services</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="">
+                                <li class="list-group-item">
+                                >  Localized management and implementation backed by a centralized support framework
+                                </li>
+                                <li class="list-group-item">
+                                    > Sharing of proven methodologies, industry standards, and effective practices
+                                </li>
+                                <li class="list-group-item">
+                                    > Harnessing synergies to leverage advanced technology systems
+                                </li>
+                                <li class="list-group-item">
+                                    > Embracing digital transformation to enhance efficiency
+                                </li>
+                                <li class="list-group-item">
+                                    > Deployment of in-house and regional engineers and technicians where plants operate
+                                </li>
+                                <li class="list-group-item">
+                                    > Combining internal expertise with digital tools to effectively manage and oversee services
+                                </li>
+                                <li class="list-group-item">
+                                    > Enhancing independence by integrating OEM expertise within the organization
+                                </li>
+                                <li class="list-group-item">
+                                    > Implementing standardized best practices to boost service quality, trust, and transparency
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Wind Service Modal -->
+            <div class="modal fade" id="windModal" tabindex="-1" aria-labelledby="windModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="windModalLabel">Wind Service</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="">
+                                <li class="list-group-item">
+                                    > Preventive and corrective maintenance for wind turbines and balance-of-plant (BOP) systems
+                                </li>
+                                <li class="list-group-item">
+                                    > Comprehensive O&M (Operation and Maintenance) agreements
+                                </li>
+                                <li class="list-group-item">
+                                    > Detailed inspections for wind turbines and BOP infrastructure
+                                </li>
+                                <li class="list-group-item">
+                                    > Supply of multibrand spare parts and consumables
+                                </li>
+                                <li class="list-group-item">
+                                    > Expertise in inventory management and technical consulting
+                                </li>
+                                <li class="list-group-item">
+                                    > Full-service asset management agreements
+                                </li>
+                                <li class="list-group-item">
+                                    > Around-the-clock (24/7) monitoring and control of windfarms and BOP systems
+                                </li>
+                                <li class="list-group-item">
+                                    > Advanced analytics for asset performance
+                                </li>
+                                <li class="list-group-item">
+                                    > Reliability assessments and improvement strategies
+                                </li>
+                                <li class="list-group-item">
+                                    > Consultancy services for O&M optimization
+                                </li>
+                                <li class="list-group-item">
+                                    > Provision of spare parts and consumables
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    
+            <!-- Storage Service Modal -->
+            <div class="modal fade" id="storageModal" tabindex="-1" aria-labelledby="storageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="storageModalLabel">Storage Service</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class="">
+                                <li class="list-group-item">
+                                    > Adoption and supervision of cutting-edge technologies
+                                </li>
+                                <li class="list-group-item">
+                                    > Knowledge enhancement through training and skill internalization
+                                </li>
+                                <li class="list-group-item">
+                                    > Collaborative partnership and assistance for grid operators
+                                </li>
+                                <li class="list-group-item">
+                                    > Deployment of skilled local technicians
+                                </li>
+                                <li class="list-group-item">
+                                    > Comprehensive O&M (Operation and Maintenance) agreements
+                                </li>
+                                <li class="list-group-item">
+                                    > Computerized systems for managing preventive and corrective maintenance tasks
+                                </li>
+                                <li class="list-group-item">
+                                    > Centralized structure for real-time monitoring and oversight
+                                </li>
+                                <li class="list-group-item">
+                                    > Analysis of performance metrics and availability
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <div class="container py-5">
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-lg-12 col-md-12 pt-4 pb-0 mb-0 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Section Title -->
+                    <div class="section-title" data-aos="fade-up">
+                      <h2>Ecotrank Asset Management</h2>
+                    </div><!-- End Section Title -->
+                </div>
+                <div class="col-md-12">
+                    
+                    <p>
+                        Ecotrank's experienced Asset Management team handles the day-to-day oversight of our clients' SPVs. Our services cover the full range of asset management needs, from field operations to administrative support, to ensure our clients' assets are well-maintained and performing optimally.
+                    </p>
+                </div>
+                <!-- Technical & Operational Management -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-gear-fill text-primary fs-1 me-3"></i>
+                                <h5 class="card-title mb-0">Technical & Operational Management</h5>
+                            </div>
+                            <ul class="list-unstyled ps-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Warranty compliance verification</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Spare parts / stock management</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> System integration</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Monitoring & supervision system</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Follow-up of preventive maintenance</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Security service & surveillance</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Insurance claims</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Optimizations analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Consulting & Advisory Services -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-lightbulb-fill text-warning fs-1 me-3"></i>
+                                <h5 class="card-title mb-0">Consulting & Advisory Services</h5>
+                            </div>
+                            <ul class="list-unstyled ps-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Legal support</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Regulatory compliance</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> HSE support</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Quality assurance</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Project finance review</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Risk assessment</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Transaction services</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Technical consultancy services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Reporting -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-file-earmark-bar-graph-fill text-info fs-1 me-3"></i>
+                                <h5 class="card-title mb-0">Reporting</h5>
+                            </div>
+                            <ul class="list-unstyled ps-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Relevant incidents</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Relevant interventions</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Maintenance plan</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Security status</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Financial and operational KPI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- General & Administrative Management -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-briefcase-fill text-secondary fs-1 me-3"></i>
+                                <h5 class="card-title mb-0">General & Administrative Management</h5>
+                            </div>
+                            <ul class="list-unstyled ps-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Interface with third parties</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Periodic meetings / calls</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Correspondence management</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Follow-up report</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Proposed meetings agenda</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Financial & Accounting Services -->
+                <div class="col">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-wallet-fill text-success fs-1 me-3"></i>
+                                <h5 class="card-title mb-0">Financial & Accounting Services</h5>
+                            </div>
+                            <ul class="list-unstyled ps-3">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Energy invoices</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Financial statements</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Cash-flow management</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Tax compliance</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Annual budget</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Financing scheme</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Cost control procedures</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Contract management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ecotrunk</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Professional Centre Off Ngong Road</p>
+            <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 728 367 885</span></p>
+            <p><strong>Email:</strong> <span>info@ecotrunk.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">HSE</a></li>
+            <li><a href="#">Uncompromising Ethics</a></li>
+            <li><a href="#">Certificate & recognitions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Energy Producer</h4>
+          <ul>
+            <li><a href="#">Corporate PPA</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Service Provider</h4>
+          <ul>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Maintenance (O&M)</a></li>
+            <li><a href="#">Distribution</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Investors</h4>
+          <ul>
+            <li><a href="#">Financial results & reports</a></li>
+            <li><a href="#">Governance</a></li>
+            <li><a href="#">Share price</a></li>
+            <li><a href="#">Stay informed</a></li>
+            <li><a href="#">Regulated information</a></li>
+            <li><a href="#">Shareholders</a></li>
+            <li><a href="#">Debt and Financing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">ecotrunk</strong> <span>All Rights Reserved</span>
+        Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
+      </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function checkTimeline() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const itemBottom = item.getBoundingClientRect().bottom;
+            
+            if (itemTop < window.innerHeight * 0.8 && itemBottom > 0) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkTimeline);
+    window.addEventListener('load', checkTimeline);
+</script>
+</body>
+
+</html>

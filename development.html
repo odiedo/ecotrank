@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ecotrank</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- <link href="assets/css/energy_producer.css" rel="stylesheet"> -->
+  <style>
+    .timeline {
+        position: relative;
+        padding: 10px 0;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #0d83fd, #0d83fd);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-item {
+        padding: 20px;
+        position: relative;
+        margin-bottom: 30px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+    }
+    .timeline-item.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .timeline-item:nth-child(even) {
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd) {
+        text-align: right;
+    }
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #06478b;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 4px solid white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .timeline-content {
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .timeline-content h2 {
+        color: #0d83fd;
+        margin-bottom: 15px;
+    }
+    .badge-gw {
+        background-color: #0f6aca;
+        color: white;
+        font-size: 1.2em;
+        margin: 10px 0;
+        display: inline-block;
+    }
+    .timeline-content .projects {
+        color: #555;
+        font-style: italic;
+    }
+    </style>
+</head>
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">ecotrank</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="">Home</a></li>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#about.html">About us</a></li>
+              <li><a href="#whoweare.html">Who we are </a></li>
+              <li><a href="#values.html">Our Values</a></li>
+              <li><a href="#history.html">Our History</a></li>
+              <li><a href="#sustain.html">Sustainability </a></li>
+              <li><a href="#management.html">Our management</a></li>
+              <li><a href="#located.html">Where we are</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="active"><span>What we do</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="energy_producer.html">Energy Producer</a></li>
+              <li><a href="service_provider.html">Service Provider </a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>News</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="blogs.html">Blogs </a></li>
+            </ul>
+          </li>
+          <li><a href="#careers">Careers</a></li>
+          <li class="dropdown"><a href="#"><span>Investors</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#overview.html">Overview</a></li>
+              <li><a href="#finance.html">Financial Results & Reports </a></li>
+              <li><a href="#Governance">Governance</a></li>
+              <li><a href="#regulated_info.html">Regulated information</a></li>
+              <li><a href="#shareholders.html">Shareholders</a></li>
+              <li><a href="#debt_finance.html">Debt & Financing</a></li>
+              <li><a href="#share_price.html">Share Price</a></li>
+              <li><a href="#informed.html">Stay Informed</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
+    </div>
+  </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title light-background">
+            <!-- <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/img/solar_vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <img src="assets/img/paper.jpg" class="hero-video" alt="">
+            
+            <div class="gradient-overlay-pages"></div>
+            <div class="container">
+                <h1>Development</h1>
+                <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Service Provider</li>
+                    <li class="current">Development</li>
+                </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Services Section -->
+        <section id="services" class="services section light-background">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card border-0">
+                            <div class="card-header bg-transparent p-0 m-0">
+                                <img src="assets/img/paper.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h3>Development</h3>
+                                <p>EcoTrank’s dedicated teams manage every stage of project development, from evaluating site potential and securing prime locations to initiating construction after obtaining all necessary permits and authorizations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="10">
+                        <div class="row stats-row mb-4" data-aos="fade-up" data-aos-delay="100">
+                          <div class="col-lg-12 col-md-12 pt-4 pb-0 mb-0 text-center">
+                            <!-- Section Title -->
+                            <div class="section-title" data-aos="fade-up">
+                              <h2>Notable Metrics</h2>
+                            </div><!-- End Section Title -->
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="stat-item">
+                              <div class="stat-icon text-center">
+                                <i class="bi bi-activity" style="font-size: 50px;"></i>
+                              </div>
+                              <div class="stat-content text-center">
+                                <h2>17.2 GW</h2>
+                                <p class="mb-0" style="font-size: 12px;">pipeline of projects</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="stat-item">
+                              <div class="stat-icon text-center">
+                                <i class="bi bi-lightning-charge"  style="font-size: 50px;"></i>
+                              </div>
+                              <div class="stat-content text-center">
+                                <h2>>5 GW</h2>
+                                <p class="mb-0" style="font-size: 12px;">2027 capacity ambition (in operation and under construction) including ~ 4.2 GW in operation</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="stat-item">
+                              <div class="stat-icon text-center">
+                                <i class="bi bi-globe"  style="font-size: 50px;"></i>
+                              </div>
+                              <div class="stat-content text-center">
+                                <h2>5</h2>
+                                <p class="mb-0" style="font-size: 12px;">countries with local Development
+                                  +
+                                  international prospection</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Section Title -->
+                        <div class="container section-title" data-aos="fade-up">
+                          <h2>Standard development process</h2>
+                        </div><!-- End Section Title -->
+                        <div class="timeline">
+                            <!-- Site Identification -->
+                            <div class="timeline-item" data-region="SiteIdentification">
+                                <div class="timeline-content">
+                                  <img src="assets/img/Site_Identification.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                  <h2>Site Identification & Feasibility Studies</h2>
+                                  <p>We carefully select the best locations for power generation by conducting resource assessments (using advanced software and campaigns) and evaluating production capacity. During this phase, we also assess potential environmental and social impacts, identifying solutions for land and grid connections.</p>
+                                  <center><i class="bi bi-arrow-down"></i></center>
+                                </div>
+                            </div>
+                            <!-- Environmental Studies -->
+                            <div class="timeline-item" data-region="EnvironmentalStudies">
+                                <div class="timeline-content">
+                                  <img src="assets/img/Environmental.jpeg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                  <h2>Environmental & Social Studies</h2>
+                                  <p>EcoTrank rigorously evaluates all project sites to understand the potential impact on the environment and local communities. Our studies also include mitigation measures to minimize impact while fostering sustainable local development.</p>
+                                  <center><i class="bi bi-arrow-down"></i></center>
+                                </div>
+                            </div>
+                            <!-- Grid Connection -->
+                            <div class="timeline-item" data-region="GridConnection">
+                                <div class="timeline-content">
+                                  <img src="assets/img/Grid Connection Studies.webp" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                  <h2>Grid Connection Studies</h2>
+                                  <p>Grid connection is essential for a successful renewable energy project. EcoTrank performs detailed assessments of the power infrastructure at substations where plants will be connected, ensuring seamless integration.</p>
+                                  <center><i class="bi bi-arrow-down"></i></center>
+                                </div>
+                            </div>
+                            <!-- Project Design -->
+                            <div class="timeline-item" data-region="ProjectDesign">
+                                <div class="timeline-content">
+                                  <img src="assets/img/solar-power-6860359_1280.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                  <h2>Project Design</h2>
+                                  <p>Our engineering team designs plants to optimize power production based on site constraints, available resources, and grid capacity, ensuring efficiency throughout all development phases.</p>
+                                  <center><i class="bi bi-arrow-down"></i></center>
+                                </div>
+                            </div>
+                            <!-- Land Securing -->
+                            <div class="timeline-item" data-region="LandSecuring">
+                                <div class="timeline-content">
+                                  <img src="assets/img/land_securing.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                  <h2>Land Securing</h2>
+                                  <p>Land plays a critical role in renewable energy projects. We collaborate with landowners, public or private, and engage with local communities to ensure public acceptance. Negotiations include agreements and rents for land use.</p>
+                                  <center><i class="bi bi-arrow-down"></i></center>
+                                </div>
+                            </div>
+                            <!-- Permitting -->
+                            <div class="timeline-item" data-region="Permitting">
+                                <div class="timeline-content">
+                                  <img src="assets/img/permit.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                  <h2>Permitting</h2>
+                                  <p>Compliance with local regulations is paramount. EcoTrank secures licenses, permits, and other authorizations from regulatory bodies early in the project lifecycle to avoid delays and maintain smooth progress.</p>
+                                  <center><i class="bi bi-arrow-down"></i></center>
+                                </div>
+                            </div>
+                            <!-- Further Steps -->
+                            <div class="timeline-item" data-region="FurtherSteps">
+                                <div class="timeline-content">
+                                  <img src="assets/img/further.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                  <h2>Further Steps in the Development Process</h2>
+                                  <ul>
+                                    <li> Participation in Tenders/Auctions <</li>
+                                    <li>Project Financing or Due Diligence <</li>
+                                    <li>Offtaker Negotiations <</li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ecotrunk</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Professional Centre Off Ngong Road</p>
+            <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 728 367 885</span></p>
+            <p><strong>Email:</strong> <span>info@ecotrunk.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">HSE</a></li>
+            <li><a href="#">Uncompromising Ethics</a></li>
+            <li><a href="#">Certificate & recognitions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Energy Producer</h4>
+          <ul>
+            <li><a href="#">Corporate PPA</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Service Provider</h4>
+          <ul>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Maintenance (O&M)</a></li>
+            <li><a href="#">Distribution</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Investors</h4>
+          <ul>
+            <li><a href="#">Financial results & reports</a></li>
+            <li><a href="#">Governance</a></li>
+            <li><a href="#">Share price</a></li>
+            <li><a href="#">Stay informed</a></li>
+            <li><a href="#">Regulated information</a></li>
+            <li><a href="#">Shareholders</a></li>
+            <li><a href="#">Debt and Financing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">ecotrunk</strong> <span>All Rights Reserved</span>
+        Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
+      </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function checkTimeline() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const itemBottom = item.getBoundingClientRect().bottom;
+            
+            if (itemTop < window.innerHeight * 0.8 && itemBottom > 0) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkTimeline);
+    window.addEventListener('load', checkTimeline);
+</script>
+</body>
+
+</html>

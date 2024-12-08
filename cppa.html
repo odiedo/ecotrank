@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ecotrank</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/energy_producer.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .section-container {
+      padding: 3rem 0;
+    }
+
+    .card-custom {
+      border: none;
+      overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-custom img {
+      height: auto;
+      object-fit: cover;
+    }
+
+    .card-body h5 {
+      color: #0d83fd;
+    }
+
+    .card-body h5:hover {
+      color: #0d83fd;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .btn-custom {
+      background-color: #0d83fd;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #0d83fd;
+    }
+
+       .faq-section {
+      margin-top: 30px;
+    }
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      color: #0d83fd;
+      margin-bottom: 10px;
+    }
+    .faq-answer {
+      margin-left: 20px;
+      color: #555;
+    }
+    .faq-question:hover {
+      color: #0d83fd;
+    }
+    .faq-item {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .faq-item.active {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">ecotrank</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="">Home</a></li>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#about.html">About us</a></li>
+              <li><a href="#whoweare.html">Who we are </a></li>
+              <li><a href="#values.html">Our Values</a></li>
+              <li><a href="#history.html">Our History</a></li>
+              <li><a href="#sustain.html">Sustainability </a></li>
+              <li><a href="#management.html">Our management</a></li>
+              <li><a href="#located.html">Where we are</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="active"><span>What we do</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="energy_producer.html">Energy Producer</a></li>
+              <li><a href="service_provider.html">Service Provider </a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>News</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="blogs.html">Blogs </a></li>
+            </ul>
+          </li>
+          <li><a href="#careers">Careers</a></li>
+          <li class="dropdown"><a href="#"><span>Investors</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#overview.html">Overview</a></li>
+              <li><a href="#finance.html">Financial Results & Reports </a></li>
+              <li><a href="#Governance">Governance</a></li>
+              <li><a href="#regulated_info.html">Regulated information</a></li>
+              <li><a href="#shareholders.html">Shareholders</a></li>
+              <li><a href="#debt_finance.html">Debt & Financing</a></li>
+              <li><a href="#share_price.html">Share Price</a></li>
+              <li><a href="#informed.html">Stay Informed</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <!-- <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/img/wind.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video> -->
+      <img src="assets/img/energy_sales.jpg" class="hero-video" alt="">
+    
+      <div class="gradient-overlay-pages"></div>
+      <div class="container">
+        <h1>Corporate CPPA</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Energy producer</li>
+            <li class="current">CPPA</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+    <section class="section-container">
+      <div class="container">
+        <!-- <h2 class="section-title">Energy Sales & Power Purchase Agreements</h2> -->
+        <div class="row g-4">
+          <!-- Energy Sales Card -->
+          <div class="col-md-6">
+            <div class="card card-custom">
+              <img src="assets/img/cppa.png" class="card-img-top" alt="Energy Sales Image">
+              <div class="card-body">
+                <h5 class="card-title">What is a Corporate PPA?</h5>
+                <p class="card-text">
+                    A Corporate Power Purchase Agreement (PPA) is a contract between a buyer and an electricity producer, where the buyer purchases electricity at a fixed price for a set period. It covers terms like contract duration, volume, and price, and can apply to energy from existing or future renewable projects.
+                    
+                    <b> EcoTrank</b> facilitates these agreements, aligning the needs of both buyers and producers.
+                </p>
+                <a href="#" class="btn btn-custom">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <!-- PPA Card -->
+          <div class="col-md-6">
+            <div class="card card-custom">
+              <div class="card-body">
+                <h5 class="card-title">EcoTrank: Pioneering Corporate PPA Solutions for a Sustainable Future</h5>
+                <p class="card-text">
+                    EcoTrank's CPPA model focuses on procurement, risk management, and price competitiveness, providing a sustainable solution to enhance your business. With our expertise across the renewable energy value chain, we deliver competitive, risk-free energy.
+                </p>
+                <a href="#" class="btn btn-custom">Learn More</a>
+              </div>
+            </div>
+            <div class="container my-5">
+                <h2 class="text-center">Corporate PPA FAQ</h2>
+                <div class="faq-section">
+              
+                  <div class="faq-item">
+                    <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#greenElectricity" aria-expanded="false" aria-controls="greenElectricity">
+                      <i class="bi bi-chevron-right"></i> What is Green Electricity Procurement?
+                    </div>
+                    <div id="greenElectricity" class="collapse faq-answer">
+                      <p>Renewable electricity has a direct impact on decarbonizing your energy needs and achieving your sustainability goals.</p>
+                    </div>
+                  </div>
+              
+                  <div class="faq-item">
+                    <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#riskManagement" aria-expanded="false" aria-controls="riskManagement">
+                      <i class="bi bi-chevron-right"></i> How does Risk Management work in CPPA?
+                    </div>
+                    <div id="riskManagement" class="collapse faq-answer">
+                      <p>A CPPA provides your company with long-term price visibility and diversifies your portfolio.</p>
+                    </div>
+                  </div>
+              
+                  <div class="faq-item">
+                    <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#price" aria-expanded="false" aria-controls="price">
+                      <i class="bi bi-chevron-right"></i> How competitive are the Prices in a CPPA?
+                    </div>
+                    <div id="price" class="collapse faq-answer">
+                      <p>Today, renewable technologies can offer very competitive electricity prices and help your company meet its financial and environmental goals.</p>
+                    </div>
+                  </div>
+              
+                  <div class="faq-item">
+                    <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#brandInvestors" aria-expanded="false" aria-controls="brandInvestors">
+                      <i class="bi bi-chevron-right"></i> What role does Brand and Investors play in CPPA?
+                    </div>
+                    <div id="brandInvestors" class="collapse faq-answer">
+                      <p>A strong commitment to corporate social responsibility demonstrates a willingness to be at the forefront of the market and attracts potential customers and investors.</p>
+                    </div>
+                  </div>
+              
+                  <div class="faq-item">
+                    <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#affordability" aria-expanded="false" aria-controls="affordability">
+                      <i class="bi bi-chevron-right"></i> How does CPPA ensure Affordability?
+                    </div>
+                    <div id="affordability" class="collapse faq-answer">
+                      <p>Ensures a competitive long-term electricity rate with no upfront CAPEX capital investment.</p>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+              
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ecotrunk</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Professional Centre Off Ngong Road</p>
+            <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 728 367 885</span></p>
+            <p><strong>Email:</strong> <span>info@ecotrunk.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">HSE</a></li>
+            <li><a href="#">Uncompromising Ethics</a></li>
+            <li><a href="#">Certificate & recognitions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Energy Producer</h4>
+          <ul>
+            <li><a href="#">Corporate PPA</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Service Provider</h4>
+          <ul>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Maintenance (O&M)</a></li>
+            <li><a href="#">Distribution</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Investors</h4>
+          <ul>
+            <li><a href="#">Financial results & reports</a></li>
+            <li><a href="#">Governance</a></li>
+            <li><a href="#">Share price</a></li>
+            <li><a href="#">Stay informed</a></li>
+            <li><a href="#">Regulated information</a></li>
+            <li><a href="#">Shareholders</a></li>
+            <li><a href="#">Debt and Financing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">ecotrunk</strong> <span>All Rights Reserved</span>
+        Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
+      </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
