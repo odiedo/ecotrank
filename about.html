@@ -28,7 +28,96 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/energy_producer.css" rel="stylesheet">
   <style>
-
+    .history {
+        position: relative;
+        margin: 10px auto;
+        padding: 10px 0;
+        max-width: 100%;
+    }
+    .history::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        background: #0d6efd;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+    }
+    .history-item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 50%;
+        padding: 10px 0;
+    }
+    .history-item img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #0d6efd;
+    }
+    .history-item.left {
+        left: 0;
+        justify-content: flex-end;
+        text-align: right;
+    }
+    .history-item.right {
+        left: 50%;
+    }
+    .history-item .history-content {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 10px;
+        max-width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: small;
+    }
+    .history-item.left .history-content {
+        margin-right: 10px;
+    }
+    .history-item.right .history-content {
+        margin-left: 10px;
+    }
+    .history-item::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: #0d6efd;
+        border-radius: 50%;
+        top: 50%;
+        z-index: 1;
+    }
+    .history-item.left::before {
+        right: -8px;
+    }
+    .history-item.right::before {
+        left: -8px;
+    }
+    @media (max-width: 768px) {
+        .history-item {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start !important;
+            text-align: left !important;
+            padding-left: 50px;
+        }
+        .history-item.left, .history-item.right {
+            left: 0 !important;
+        }
+        .history-item img {
+            margin-bottom: 10px;
+        }
+        .history-item.left .history-content,
+        .history-item.right .history-content {
+            margin: 0 !important;
+        }
+        .history-item::before {
+            left: 20px !important;
+        }
+    }
   </style>
 </head>
 <body class="service-details-page">
@@ -44,7 +133,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="">Home</a></li>
-          <li><a href="#" class="active"><span>About</span></a></li>
+          <li><a href="about.html" class="active"><span>About</span></a></li>
           <li class="dropdown"><a href="#"><span>What we do</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#"></a></li>
@@ -140,7 +229,7 @@
         </div>
       </div>
     </section><!-- /About Section -->
-    <div class="container-xxl pb-4 pt-4" style="background: #0d81fd2c; ">
+    <div class="container-xxl pb-4 pt-4" style="background-color: #d8f0f9;">
         <div class="container">
             <div class="section-title" data-aos="fade-up" data-aos-delay="100">
                 <h2>Our Values</h2>
@@ -220,6 +309,62 @@
             </div>
         </div>
     </section>
+    <div class="container py-5">
+        <h2 class="text-center text-primary mb-5"></h2>
+        <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+            <h2>EcoTrank History</h2>
+        </div>
+        <div class="history">
+            <!-- 2014 -->
+            <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/60" alt="Founded">
+                <div class="history-content">
+                    <h6>2014: Founded Econtrank</h6>
+                    <p>Our journey began with a bold vision to transform the industry with innovative solutions.</p>
+                </div>
+            </div>
+            <!-- 2016 -->
+            <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/60" alt="First Major Milestone">
+                <div class="history-content">
+                    <h6>2016: First Milestone</h6>
+                    <p>Achieved our first significant project, marking the start of rapid growth.</p>
+                </div>
+            </div>
+            <!-- 2018 -->
+            <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/60" alt="Expansion">
+                <div class="history-content">
+                    <h6>2018: Expansion</h6>
+                    <p>Ventured into new regions, broadening our presence globally.</p>
+                </div>
+            </div>
+            <!-- 2020 -->
+            <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/60" alt="Breakthrough">
+                <div class="history-content">
+                    <h6>2020: Breakthrough</h6>
+                    <p>Developed cutting-edge technologies that redefined industry standards.</p>
+                </div>
+            </div>
+            <!-- 2022 -->
+            <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/60" alt="Recognition">
+                <div class="history-content">
+                    <h6>2022: Recognition</h6>
+                    <p>Earned global recognition as a leader in the field, winning prestigious awards.</p>
+                </div>
+            </div>
+            <!-- 2024 -->
+            <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/60" alt="Future">
+                <div class="history-content">
+                    <h6>2024: Future Vision</h6>
+                    <p>Continuing our journey with innovation and sustainability at the forefront.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="keyFigures" class="key-figures section features-cards">
         <div class="container py-5">
