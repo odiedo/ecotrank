@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ecotrunk</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- <link href="assets/css/energy_producer.css" rel="stylesheet"> -->
+  <style>
+    .image-button {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .image-button-solar {
+        background-image: url("assets/img/solar.jpg");
+    }
+
+    .image-button-wind {
+        background-image: url("assets/img/windmill.jpg");
+    }
+
+    .image-button-storage {
+        background-image: url("assets/img/energy_storage.jpeg");
+    }
+
+    .image-button-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .image-button:hover .image-button-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .image-button-text {
+        color: white;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .image-button:hover .image-button-text {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    </style>
+</head>
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Ecotrunk</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="">Home</a></li>
+          <li><a href="about.html"><span>About</span></a></li>
+          <li class="dropdown"><a href="#"><span>What we do</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="energy_producer.html">Energy Producer</a></li>
+              <li><a href="service_provider.html">Service Provider </a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>News</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="blogs.html">Blogs </a></li>
+            </ul>
+          </li>
+          <li><a href="#careers">Careers</a></li>
+          <li class="dropdown"><a href="#"><span>Investors</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="#overview.html">Overview</a></li>
+              <li><a href="#finance.html">Financial Results & Reports </a></li>
+              <li><a href="#Governance">Governance</a></li>
+              <li><a href="#regulated_info.html">Regulated information</a></li>
+              <li><a href="#shareholders.html">Shareholders</a></li>
+              <li><a href="#debt_finance.html">Debt & Financing</a></li>
+              <li><a href="#share_price.html">Share Price</a></li>
+              <li><a href="#informed.html">Stay Informed</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+
+    </div>
+  </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title light-background">
+            <!-- <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/img/solar_vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <img src="assets/img/contact-us.jpg" class="hero-video" alt="">
+            
+            <div class="gradient-overlay-pages"></div>
+            <div class="container">
+                <h1>Contact us</h1>
+                <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Contact us</li>
+                </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Contact Section -->
+        <section id="contact" class="contact section light-background">
+        <!-- Section Title -->
+        <!-- <div class="container section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+        </div>  -->
+        <!-- End Section Title -->
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-4 g-lg-5">
+            <div class="col-lg-5">
+                <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+                <h3>Contact Info</h3>
+                <p>Please feel free to get in touch with one of our offices if you need more information.</p>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box">
+                    <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div class="content">
+                    <h4>Our Location</h4>
+                    <p>Professional Centre Off Ngong Road</p>
+                    <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+                    </div>
+                </div>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-box">
+                    <i class="bi bi-telephone"></i>
+                    </div>
+                    <div class="content">
+                    <h4>Phone Number</h4>
+                    <p>+254 728 367 885</p>
+                    </div>
+                </div>
+
+                <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-box">
+                    <i class="bi bi-envelope"></i>
+                    </div>
+                    <div class="content">
+                    <h4>Email Address</h4>
+                    <p>info@ecotrunk.com</p>
+                    <p>contact@ecotrunk.com</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+                <h3>Get in Touch</h3>
+                <p>Fill in your details and submit the form. We will get back to you shortly.</p>             
+
+                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                    <div class="row gy-4">
+
+                    <div class="col-md-6">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    </div>
+
+                    <div class="col-12">
+                        <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    </div>
+
+                    <div class="col-12">
+                        <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    </div>
+
+                    <div class="col-12 text-center">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+
+                    </div>
+                </form>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid py-4"></div>
+            <div class="row">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.9740324042277!2d36.744172703842125!3d-1.3047056087323772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1baead3d1909%3A0x6119cc9982d3136b!2sNgong%20Road%20Professional%20Center!5e1!3m2!1sen!2ske!4v1733930865436!5m2!1sen!2ske" width="100%" height="450" style="border:0; padding: 0; margin: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section><!-- /Contact Section -->
+        
+    </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Ecotrunk</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Professional Centre Off Ngong Road</p>
+            <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 728 367 885</span></p>
+            <p><strong>Email:</strong> <span>info@ecotrunk.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>About us</h4>
+          <ul>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">HSE</a></li>
+            <li><a href="#">Uncompromising Ethics</a></li>
+            <li><a href="#">Certificate & recognitions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Energy Producer</h4>
+          <ul>
+            <li><a href="#">Corporate PPA</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Service Provider</h4>
+          <ul>
+            <li><a href="#">Development</a></li>
+            <li><a href="#">Maintenance (O&M)</a></li>
+            <li><a href="#">Distribution</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Investors</h4>
+          <ul>
+            <li><a href="#">Financial results & reports</a></li>
+            <li><a href="#">Governance</a></li>
+            <li><a href="#">Share price</a></li>
+            <li><a href="#">Stay informed</a></li>
+            <li><a href="#">Regulated information</a></li>
+            <li><a href="#">Shareholders</a></li>
+            <li><a href="#">Debt and Financing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Ecotrunk</strong> <span>All Rights Reserved</span>
+        Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
+      </p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function checkTimeline() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const itemBottom = item.getBoundingClientRect().bottom;
+            
+            if (itemTop < window.innerHeight * 0.8 && itemBottom > 0) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkTimeline);
+    window.addEventListener('load', checkTimeline);
+</script>
+</body>
+
+</html>
