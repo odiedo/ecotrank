@@ -331,10 +331,13 @@
     </section><!-- /Features Section -->
 
     <section id="features-cards" class="features-cards section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Services</h2>
+      </div><!-- End Section Title -->
       <div class="container-fluid">
         <div class="row ">
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="feature-box orange">
+            <div class="feature-box orange" style="background-color: #0002">
               <div class="feature-inner">
                 <!-- Front Side -->
                 <div class="feature-front">
@@ -352,7 +355,7 @@
           </div>
     
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="feature-box blue ">
+            <div class="feature-box blue "  style="background-color: #4002">
               <div class="feature-inner">
                 <div class="feature-front">
                   <img src="assets/img/windmill.jpg" alt="Wind" class="feature-image">
@@ -368,10 +371,10 @@
           </div>
     
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-box green">
+            <div class="feature-box green"   style="background-color: #0402">
               <div class="feature-inner">
                 <div class="feature-front">
-                  <img src="assets/img/energy_engineer_and_wind_turbines.jpg" alt="Biomass" class="feature-image">
+                  <img src="assets/img/biomass.png" alt="Biomass" class="feature-image">
                   <h4>Biomass</h4>
                 </div>
                 <span></span>
@@ -384,7 +387,7 @@
           </div>
     
           <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="feature-box red">
+            <div class="feature-box red"   style="background-color: #0042">
               <div class="feature-inner">
                 <div class="feature-front">
                   <img src="assets/img/hydro.jpg" alt="Hydro" class="feature-image">
@@ -492,57 +495,6 @@
     </section>
     <!-- /Call To Action Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper d-flex justify-content-center align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
     <!-- Services Section -->
     <section id="services" class="services section light-background">
 
@@ -622,18 +574,74 @@
         </div>
       </div>
     </section><!-- /Call To Action 2 Section -->
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+      <div class="p-0 m-1 section-title" data-aos="fade-up">
+        <h2>Partners</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper d-flex justify-content-center align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
-      <div class="container-fluid">
+      <div class="container-fluid py-4">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Office Directions</h2>
+        </div><!-- End Section Title -->
         <div class="row">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206088.5475821775!2d36.74038238250115!3d-1.2877767408444962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1baead3d1909%3A0x6119cc9982d3136b!2sNgong%20Road%20Professional%20Center!5e1!3m2!1sen!2ske!4v1733929024235!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.9740324042277!2d36.744172703842125!3d-1.3047056087323772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1baead3d1909%3A0x6119cc9982d3136b!2sNgong%20Road%20Professional%20Center!5e1!3m2!1sen!2ske!4v1733930865436!5m2!1sen!2ske" width="100%" height="450" style="border:0; padding: 0; margin: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <!-- <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-      </div><!-- End Section Title -->
+      </div>  -->
+      <!-- End Section Title -->
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
