@@ -26,82 +26,73 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-green: #0d83fd;
+            --secondary-green: #0d81fde1;
+            --text-dark: #294969;
+            --bg-light: #f4f6f8;
+        }
         body {
-            background-color: #f4f6f9;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
         }
-        .news-events-container {
-            background-color: white;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
-            overflow: hidden;
+        .blog-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
         }
-        .news-card {
+        .blog-card {
             transition: all 0.3s ease;
             border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
         }
-        .news-card:hover {
+        .blog-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
-        .news-card-img {
+        .blog-card-img {
             height: 250px;
             object-fit: cover;
         }
-        .badge-category {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: #007bff;
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+        .category-badge {
+            background-color: var(--primary-green);
             color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
         }
-        .events-timeline .event-item {
-            border-left: 3px solid #007bff;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
-        .press-release-container {
+        .sidebar-section {
             background-color: white;
-            border-radius: 12px;
-            padding: 30px;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
         }
-        .press-release-item {
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #e9ecef;
-            padding: 15px 0;
-            transition: background-color 0.3s ease;
+        .sidebar-categories a {
+            color: var(--text-dark);
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
-        .press-release-item:hover {
-            background-color: #f8f9fa;
+        .sidebar-categories a:hover {
+            color: var(--secondary-green);
         }
-        .date-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #e9f5e9;
-            color: #28a745;
-            padding: 10px;
-            border-radius: 8px;
-            margin-right: 20px;
-            min-width: 70px;
-            text-align: center;
-        }
-        .date-badge .day {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .date-badge .month {
-            text-transform: uppercase;
-            font-size: 0.7rem;
-        }
-        .subscribe-btn {
-            background-color: #28a745;
+        .newsletter-signup {
+            background-color: var(--primary-green);
             color: white;
-            border: none;
-            transition: background-color 0.3s ease;
-        }
-        .subscribe-btn:hover {
-            background-color: #218838;
+            padding: 25px;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -128,8 +119,8 @@
                 <li class="dropdown"><a href="#" class="active"><span>News</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                     <li><a href="#"></a></li>
-                    <li><a href="news.html" class="active">News</a></li>
-                    <li><a href="blogs.html">Blogs </a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="blogs.html" class="active">Blogs </a></li>
                     </ul>
                 </li>
                 <li><a href="#careers">Careers</a></li>
@@ -162,104 +153,109 @@
                 <source src="assets/img/solar_vid.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video> -->
-            <img src="assets/img/woman-5275027_1280.jpg" class="hero-video" alt="">
+            <img src="assets/img/light-bulb-4297600_1280.jpg" class="hero-video" alt="">
             
             <div class="gradient-overlay-pages"></div>
             <div class="container">
-                <h1>News & Events</h1>
+                <h1>Exploring Renewable Energy, Sustainability, and Innovation</h1>
                 <nav class="breadcrumbs">
                 <ol>
                     <li><a href="index.html">Home</a></li>
-                    <li class="current">News & Events</li>
+                    <li class="current">Blogs</li>
                 </ol>
                 </nav>
             </div>
         </div><!-- End Page Title -->
-        <div class="container py-5">
-            <div class="row news-events-container p-4">
-                <div class="col-lg-8">
-                    <div class="press-release-container">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h2 class="fw-bold mb-0">Recent News</h2>
-                        </div>
-                        
-                        <div class="press-release-item">
-                            <div class="date-badge">
-                                <span class="day">10</span>
-                                <span class="month">Dec 24</span>
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5 class="mb-2">EcoTrunk Unveils $500M Green Energy Investment Strategy</h5>
-                                <p class="text-muted mb-0">Comprehensive plan to accelerate renewable infrastructure development across Africa and Latin America</p>
-                            </div>
-                        </div>
-                
-                        <div class="press-release-item">
-                            <div class="date-badge">
-                                <span class="day">09</span>
-                                <span class="month">Dec 24</span>
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5 class="mb-2">EcoTrunk Achieves 100% Carbon Neutrality Two Years Ahead of Schedule</h5>
-                                <p class="text-muted mb-0">Company reaches ambitious sustainability goal through innovative renewable energy solutions</p>
-                            </div>
-                        </div>
-                
-                        <div class="press-release-item">
-                            <div class="date-badge">
-                                <span class="day">02</span>
-                                <span class="month">Dec 24</span>
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5 class="mb-2">Strategic Partnership with African Development Bank for Renewable Projects</h5>
-                                <p class="text-muted mb-0">EcoTrunk to develop 500 MW of renewable energy infrastructure across sub-Saharan Africa</p>
-                            </div>
-                        </div>
-                
-                        <div class="press-release-item">
-                            <div class="date-badge">
-                                <span class="day">26</span>
-                                <span class="month">Nov 24</span>
-                            </div>
-                            <div class="flex-grow-1">
-                                <h5 class="mb-2">EcoTrunk Launches Advanced Energy Storage Technology</h5>
-                                <p class="text-muted mb-0">Breakthrough battery technology promises 40% improved renewable energy storage efficiency</p>
+        
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                            <img src="assets/img/solar-future.jpg" class="card-img-top blog-card-img" alt="Blog Post Image">
+                            <div class="card-body">
+                                <div class="blog-meta">
+                                    <span class="category-badge">Solar Energy</span>
+                                    <span>December 10, 2024</span>
+                                </div>
+                                <h5 class="card-title">The Future of Solar: Emerging Technologies in Photovoltaics</h5>
+                                <p class="card-text text-muted">Exploring cutting-edge innovations transforming solar energy efficiency and accessibility.</p>
+                                <a href="#" class="btn btn-outline-success">Read More</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 border-start ps-4">
-                    <h2 class="mb-4 fw-bold">Upcoming Events in Kenya</h2>
-                    <div class="events-timeline">
-                        <div class="event-item">
-                            <h6 class="mb-1">Kenya Green Energy Summit</h6>
-                            <p class="text-muted small mb-1">January 22-24, 2025</p>
-                            <p class="text-muted small mb-1">Nairobi, Kenya</p>
-                            <span class="badge bg-success text-white">Hybrid</span>
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                            <img src="assets/img/windmill.jpg" class="card-img-top blog-card-img" alt="Blog Post Image">
+                            <div class="card-body">
+                                <div class="blog-meta">
+                                    <span class="category-badge">Wind Energy</span>
+                                    <span>November 28, 2024</span>
+                                </div>
+                                <h5 class="card-title">Offshore Wind: Global Expansion and Economic Impact</h5>
+                                <p class="card-text text-muted">Analyzing the economic and environmental benefits of offshore wind infrastructure.</p>
+                                <a href="#" class="btn btn-outline-success">Read More</a>
+                            </div>
                         </div>
-                        <div class="event-item">
-                            <h6 class="mb-1">East African Geothermal Conference</h6>
-                            <p class="text-muted small mb-1">February 12-14, 2025</p>
-                            <p class="text-muted small mb-1">Nakuru, Kenya</p>
-                            <span class="badge bg-primary text-white">In-Person</span>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                            <img src="assets/img/energy-storage.webp" class="card-img-top blog-card-img" alt="Blog Post Image">
+                            <div class="card-body">
+                                <div class="blog-meta">
+                                    <span class="category-badge">Energy Storage</span>
+                                    <span>December 5, 2024</span>
+                                </div>
+                                <h5 class="card-title">Battery Technology: Revolutionizing Renewable Energy Storage</h5>
+                                <p class="card-text text-muted">Investigating breakthrough battery technologies improving renewable energy grid stability.</p>
+                                <a href="#" class="btn btn-outline-success">Read More</a>
+                            </div>
                         </div>
-                        <div class="event-item">
-                            <h6 class="mb-1">Solar Innovation Workshop</h6>
-                            <p class="text-muted small mb-1">March 5-7, 2025</p>
-                            <p class="text-muted small mb-1">Mombasa, Kenya</p>
-                            <span class="badge bg-warning text-dark">Technical Training</span>
-                        </div>
-                        <div class="event-item">
-                            <h6 class="mb-1">Rural Electrification Symposium</h6>
-                            <p class="text-muted small mb-1">April 16-18, 2025</p>
-                            <p class="text-muted small mb-1">Kisumu, Kenya</p>
-                            <span class="badge bg-info text-white">Virtual</span>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card blog-card">
+                            <img src="assets/img/net_zero1.jpg" class="card-img-top blog-card-img" alt="Blog Post Image">
+                            <div class="card-body">
+                                <div class="blog-meta">
+                                    <span class="category-badge">Sustainability</span>
+                                    <span>November 15, 2024</span>
+                                </div>
+                                <h5 class="card-title">Corporate Sustainability: Beyond Carbon Neutrality</h5>
+                                <p class="card-text text-muted">Strategic approaches for businesses to create meaningful environmental impact.</p>
+                                <a href="#" class="btn btn-outline-success">Read More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-lg-4">
+                <div class="sidebar-section mb-4">
+                    <h5 class="mb-3">Blog Categories</h5>
+                    <div class="sidebar-categories">
+                        <a href="#">Solar Energy</a>
+                        <a href="#">Wind Power</a>
+                        <a href="#">Energy Storage</a>
+                        <a href="#">Sustainability</a>
+                        <a href="#">Policy & Regulation</a>
+                    </div>
+                </div>
+
+                <div class="newsletter-signup">
+                    <h5 class="text-white mb-3">Stay Updated</h5>
+                    <p class="text-white-50 mb-3">Subscribe to our newsletter for the latest renewable energy insights.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
+
     <footer id="footer" class="footer">
 
         <div class="container footer-top">
