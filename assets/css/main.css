@@ -988,7 +988,7 @@ section,
   background-color: var(--surface-color);
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .hero .stat-item {
