@@ -25,6 +25,41 @@
   
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        .key-figures-card {
+            background: #2002;
+            font-weight: 900;
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .investor-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .stock-performance {
+            background-color: #2002;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .stock-performance img {
+            max-height: 100px;
+            width: 100%;
+        }
+        .report-item {
+            transition: all 0.3s ease-in-out;
+        }
+        .report-item:hover {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+        }
+        .filter-container {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header id="header" class="header d-flex align-items-center fixed-top">
@@ -94,12 +129,175 @@
                 </ol>
                 </nav>
             </div>
-        </div><!-- End Page Title -->
-        <div class="container py-5">
-            <div class="row news-events-container p-4">
-
+        </div>
+        <!-- End Page Title -->
+        <!-- Key Figures Section -->
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="key-figures-card"  data-aos="fade-up" data-aos-delay="100">
+                        <div class="row text-center">
+                            <div class="col-md-3 col-6 mb-3">
+                                <h3 class="display-5">$248.9M</h3>
+                                <p>2024 Half-year Turnover</p>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <h3 class="display-5">3.1 GW</h3>
+                                <p>Capacity in Operation</p>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <h3 class="display-5">5+ GW</h3>
+                                <p>2027 Capacity Ambition</p>
+                            </div>
+                            <div class="col-md-3 col-6 mb-3">
+                                <h3 class="display-5">$475M</h3>
+                                <p>2027 Normalized EBITDA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Financial Calendar -->
+        <section class="container-fluid py-5 bg-light">
+            <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                <h2>Financial Calendar</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="text-primary">29 Jan 25</h4>
+                        <p>Q4 2024 Turnover</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="text-primary">13 Mar 25</h4>
+                        <p>2024 Full-year Results</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="text-primary">29 Apr 25</h4>
+                        <p>Q1 2025 Turnover</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 text-center">
+                    <div class="bg-white p-3 rounded shadow-sm">
+                        <h4 class="text-primary">15 May 25</h4>
+                        <p>Annual General Meeting</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Recent News and Events -->
+        <section class="container py-5">
+            <div class="row"  data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6">
+                    <h2  data-aos="fade-up" data-aos-delay="100">Recent Releases</h2>
+                    <div class="card investor-card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">10 Dec 24: EcoTrunk Consensus Update</h5>
+                            <p class="card-text">Latest market consensus and performance insights.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card investor-card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">07 Nov 24: Shares and Voting Rights</h5>
+                            <p class="card-text">Updated information on our share capital.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Upcoming Events</h2>
+                    <div class="card investor-card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">15 May 25: Annual General Meeting</h5>
+                            <p class="card-text">Join us for our annual shareholder meeting.</p>
+                            <a href="#" class="btn btn-outline-primary">Event Details</a>
+                        </div>
+                    </div>
+                    <div class="card investor-card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">29 Apr 25: Q1 2025 Turnover</h5>
+                            <p class="card-text">Quarterly financial performance update.</p>
+                            <a href="#" class="btn btn-outline-primary">View Report</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- Filter Section -->
+        <div id="finance" class="container filter-container">
+            <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                <h2>Filter Financial Reports</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <label for="yearSelect" class="form-label fw-bold">Select Year:</label>
+                    <select class="form-select" id="yearSelect">
+                        <option value="2024" selected>2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button id="filterButton" class="btn btn-primary mt-4">
+                        <i class="bi bi-filter"></i> Filter
+                    </button>
+                </div>
             </div>
         </div>
+
+        <!-- Reports Section -->
+        <div class="container">
+            <h4 id="yearTitle" class="mb-3">Reports for 2024</h4>
+            <ul class="list-group" id="reportsList">
+                <!-- Placeholder for dynamic reports -->
+            </ul>
+        </div>
+        <!-- Stock Performance -->
+        <section class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="stock-performance">
+                        <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                            <h2>Stock Performance</h2>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h3 class="text-success">$7.01</h3>
+                                <p class="text-muted">NY: ECOT</p>
+                            </div>
+                            <div>
+                                <span class="badge bg-success">+0.28%</span>
+                                <p class="text-muted">16/12/2024 9:20 AM EST</p>
+                            </div>
+                        </div>
+                        <img src="assets/img/stock.png" alt="Stock Chart" class="img-fluid mt-3">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">Analyst Coverage</h2>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Dennis Karani
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Mary Wayne
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Hassan Hamza - Najar Rios Oscar Alberto
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            Juan Camilo Rodriguez
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer id="footer" class="footer">
 
@@ -185,5 +383,64 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+        // Reports Data
+        const reportsData = {
+            "2024": [
+                { title: "CIC Forum presentation – November 2024", link: "#", type: "presentation" },
+                { title: "Third quarter 2024 turnover presentation", link: "#", type: "presentation" },
+                { title: "Third quarter 2024 turnover (Press release)", link: "#", type: "pdf" },
+                { title: "2024 Half-year financial report", link: "#", type: "pdf" },
+                { title: "Kepler Autumn conference – September 2024", link: "#", type: "presentation" }
+            ],
+            "2023": [
+                { title: "Third quarter 2023 turnover report", link: "#", type: "pdf" },
+                { title: "2023 Annual Financial Statement", link: "#", type: "pdf" },
+                { title: "Investor Day Presentation – 2023", link: "#", type: "presentation" }
+            ],
+            "2022": [
+                { title: "2022 Q4 Financial Report", link: "#", type: "pdf" },
+                { title: "Annual Review Presentation – 2022", link: "#", type: "presentation" }
+            ]
+        };
+
+        // Elements
+        const yearSelect = document.getElementById('yearSelect');
+        const filterButton = document.getElementById('filterButton');
+        const reportsList = document.getElementById('reportsList');
+        const yearTitle = document.getElementById('yearTitle');
+
+        // Function to render reports
+        function renderReports(year) {
+            const reports = reportsData[year] || [];
+            yearTitle.innerText = `Reports for ${year}`;
+            reportsList.innerHTML = ''; // Clear existing reports
+
+            reports.forEach(report => {
+                const icon = report.type === 'pdf' ? 'bi-file-earmark-pdf-fill text-danger' : 'bi-file-earmark-slides-fill text-primary';
+                const reportItem = `
+                    <li class="list-group-item d-flex justify-content-between align-items-center report-item">
+                        <div>
+                            <i class="bi ${icon} me-2"></i>
+                            <span>${report.title}</span>
+                        </div>
+                        <a href="${report.link}" class="btn btn-outline-secondary btn-sm" target="_blank">
+                            <i class="bi bi-download"></i> Download
+                        </a>
+                    </li>
+                `;
+                reportsList.insertAdjacentHTML('beforeend', reportItem);
+            });
+        }
+
+        // Event Listener for Filter Button
+        filterButton.addEventListener('click', () => {
+            const selectedYear = yearSelect.value;
+            renderReports(selectedYear);
+        });
+
+        // Initial Load
+        renderReports("2024");
+    </script>
 </body>
 </html>

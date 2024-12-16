@@ -1,214 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - iLanding Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iLanding
-  * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
-  * Updated: Nov 12 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTrunk - Investor Relations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2ecc71;
+            --secondary-green: #27ae60;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1920/800');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .key-figures-card {
+            background: linear-gradient(to right, var(--primary-green), var(--secondary-green));
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .investor-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .investor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .stock-performance {
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
 </head>
-
-<body class="starter-page-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">iLanding</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/api/placeholder/150/50" alt="EcoTrunk Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Investors</a></li>
                 </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container">
-        <h1>Starter Page</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Starter Page</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Starter Section</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
-      </div>
-
-    </section><!-- /Starter Section Section -->
-
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">iLanding</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+            </div>
         </div>
+    </nav>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">EcoTrunk Investor Relations</h1>
+            <p class="lead">Driving Sustainable Growth and Innovation in Renewable Energy</p>
         </div>
+    </section>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
+    <!-- Key Figures Section -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="key-figures-card">
+                    <div class="row text-center">
+                        <div class="col-md-3 col-6 mb-3">
+                            <h3 class="display-5">€248.9M</h3>
+                            <p>2024 Half-year Turnover</p>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <h3 class="display-5">3.1 GW</h3>
+                            <p>Capacity in Operation</p>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <h3 class="display-5">5+ GW</h3>
+                            <p>2027 Capacity Ambition</p>
+                        </div>
+                        <div class="col-md-3 col-6 mb-3">
+                            <h3 class="display-5">€475M</h3>
+                            <p>2027 Normalized EBITDA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Hic solutasetp</h4>
-          <ul>
-            <li><a href="#">Molestiae accusamus iure</a></li>
-            <li><a href="#">Excepturi dignissimos</a></li>
-            <li><a href="#">Suscipit distinctio</a></li>
-            <li><a href="#">Dilecta</a></li>
-            <li><a href="#">Sit quas consectetur</a></li>
-          </ul>
+    <!-- Recent News and Events -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Recent Press Releases</h2>
+                <div class="card investor-card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">10 Dec 24: EcoTrunk Consensus Update</h5>
+                        <p class="card-text">Latest market consensus and performance insights.</p>
+                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+                <div class="card investor-card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">07 Nov 24: Shares and Voting Rights</h5>
+                        <p class="card-text">Updated information on our share capital.</p>
+                        <a href="#" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Upcoming Events</h2>
+                <div class="card investor-card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">15 May 25: Annual General Meeting</h5>
+                        <p class="card-text">Join us for our annual shareholder meeting.</p>
+                        <a href="#" class="btn btn-outline-primary">Event Details</a>
+                    </div>
+                </div>
+                <div class="card investor-card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">29 Apr 25: Q1 2025 Turnover</h5>
+                        <p class="card-text">Quarterly financial performance update.</p>
+                        <a href="#" class="btn btn-outline-primary">View Report</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nobis illum</h4>
-          <ul>
-            <li><a href="#">Ipsam</a></li>
-            <li><a href="#">Laudantium dolorum</a></li>
-            <li><a href="#">Dinera</a></li>
-            <li><a href="#">Trodelas</a></li>
-            <li><a href="#">Flexo</a></li>
-          </ul>
+    <!-- Stock Performance -->
+    <section class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="stock-performance">
+                    <h2 class="mb-4">Stock Performance</h2>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="text-success">€7.01</h3>
+                            <p class="text-muted">Paris: ECOT</p>
+                        </div>
+                        <div>
+                            <span class="badge bg-success">+0.28%</span>
+                            <p class="text-muted">16/12/2024 9:20 AM EST</p>
+                        </div>
+                    </div>
+                    <img src="/api/placeholder/500/200" alt="Stock Chart" class="img-fluid mt-3">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Analyst Coverage</h2>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Morgan Stanley - Arthur Sitbon
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Société Générale - Michael Harleaux
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Santander - Najar Rios Oscar Alberto
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Kepler Cheuvreux - Juan Camilo Rodriguez
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
-    </div>
+    <!-- Financial Calendar -->
+    <section class="container py-5 bg-light">
+        <h2 class="text-center mb-5">Financial Calendar</h2>
+        <div class="row">
+            <div class="col-md-3 col-6 mb-3 text-center">
+                <div class="bg-white p-3 rounded shadow-sm">
+                    <h4 class="text-primary">29 Jan 25</h4>
+                    <p>Q4 2024 Turnover</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3 text-center">
+                <div class="bg-white p-3 rounded shadow-sm">
+                    <h4 class="text-primary">13 Mar 25</h4>
+                    <p>2024 Full-year Results</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3 text-center">
+                <div class="bg-white p-3 rounded shadow-sm">
+                    <h4 class="text-primary">29 Apr 25</h4>
+                    <p>Q1 2025 Turnover</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3 text-center">
+                <div class="bg-white p-3 rounded shadow-sm">
+                    <h4 class="text-primary">15 May 25</h4>
+                    <p>Annual General Meeting</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">iLanding</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
-      </div>
-    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 EcoTrunk. All Investor Relations Rights Reserved.</p>
+        </div>
+    </footer>
 
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
