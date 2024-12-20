@@ -26,6 +26,35 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .customer-item {
+      transition: transform 0.3s;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .customer-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .customer-item h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    
+    .customer-item ul li {
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+      line-height: 3px;
+    }
+    
+    .customer-item ul li i {
+      font-size: 1.2rem;
+    }
+    
+  </style>
 </head>
 
 <body class="index-page">
@@ -34,39 +63,48 @@
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Ecotrunk</h1>
+        <img src="assets/img/logo.png" alt="">
+        <!-- <h1 class="sitename">Ecotrunk</h1> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="about.html"><span>About</span></a></li>
-          <li class="dropdown"><a href="#"><span>What we do</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#"></a></li>
-              <li><a href="energy_producer.html">Energy Producer</a></li>
-              <li><a href="service_provider.html">Service Provider </a></li>
+              <li><a href="proj_dev.html#projectDevpt">Project Development & Management</a></li>
+              <li><a href="engineering_systems.html#projectDevpt">Engineering Systems Development</a></li>
+              <li><a href="consultancy.html#consultancy">Consultancy</a></li>
+              <li><a href="p&sem.html#procurement_supply">Procurement & Supply of Engineering Materials</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>News</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>Technology</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#"></a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="blogs.html">Blogs </a></li>
+              <li><a href="technology.html#hydropower">Hydropower</a></li>
+              <li><a href="technology.html#solar">Solar</a></li>
+              <li><a href="technology.html#wind">Wind</a></li>
             </ul>
           </li>
-          <li><a href="careers.html">Careers</a></li>
-          <li class="dropdown"><a href="#"><span>Investors</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#"><span>Customer</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#"></a></li>
-              <li><a href="investors.html">Overview</a></li>
-              <li><a href="investors.html?#finance">Financial Results & Reports </a></li>
-              <li><a href="about.html?#management">Governance</a></li>
-              <li><a href="investors.html#regulated">Regulated information</a></li>
-              <li><a href="investors.html#shareholders">Shareholders</a></li>
-              <li><a href="investors.html#debtFinance.html">Debt & Financing</a></li>
-              <li><a href="investors.html#informed">Stay Informed</a></li>
+              <li><a href="customer.html#energy">Energy-dependant Sectors</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Company</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="about.html#about">About us</a></li>
+              <li><a href="about.html#values">Our Values</a></li>
+              <li><a href="about.html#covid">Covid-19 Response</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#"></a></li>
+              <li><a href="resources.html#media">Media Gallery</a></li>
+              <li><a href="resources.html#press">Press Releases</a></li>
             </ul>
           </li>
           <li><a href="contact.html">Contact</a></li>
@@ -114,19 +152,7 @@
                 Ecotrunk leads the way in renewable energy, harnessing the power of wind, solar, hydro, biomass, and energy storage to create a greener tomorrow.
               </p>
               <div class="hero-buttons d-flex justify-content-center">
-                <!-- <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a> -->
-                <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn  btn-play mt-2 mt-sm-0 glightbox">
-                  <i class="bi bi-play-circle me-1"></i>
-                  Play Video
-                </a>
-                <h5 class="font-weight-bold m-0 ml-4">Play Video</h5> -->
-                <!-- <div class="d-flex justify-content-between ">
-                  <button type="button" class="btn-play" data-toggle="modal"
-                    data-src="https://www.youtube.com/embed/8HsHbrJNqSs?si=hs3v9YOUXrhwvLcW" data-target="#videoModal">
-                    <span></span>
-                  </button>
-                  <h5 class="pt-3 text-light" style="font-weight: 900; padding-left: 15px">Play Video</h5>
-                </div> -->
+                
               </div>
             </div>
           </div>
@@ -188,64 +214,64 @@
 
     <!-- About Section -->
     <section id="about" class="about section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4 align-items-center justify-content-between">
-
           <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
-            <span class="about-meta">ABOUT ECOTRUNK</span>
+            <span class="about-meta  mb-0 pb-0">ABOUT ETL</span>
             <!-- <h2 class="about-title">Voluptas enim suscipit temporibus</h2> -->
-            <p class="about-description">Established in Kenya in 2014, Ecotrunk has evolved into a global leader as a Renewable Energy Producer and Service Provider. We specialize in eco-friendly energy solutions, empowering our clients to participate in the worldwide shift towards sustainability and clean energy.</p>
+            <p class="about-description"><b>Ecotrunk International Ltd (ETL)</b> is a firm of Technologists, Consultants, and Managers
+              incorporated in the Republic of Kenya as a firm of Experts. The firm has broad experience in
+              Project Development & Management, Engineering Systems Development and Consultancy
+              in the renewable energy industry.
+            </p>
 
             <div class="row feature-list-wrapper">
               <div class="col-md-12">
-                <span class="about-meta">Our Mission</span>
-                <p>Enhancing the global environment while driving local growth and development.</p>
+                <span class="about-meta mb-0 pb-0">Our Mission</span>
+                <p>To provide the most competitive energy, engineering, and construction consulting services and tools in the respective industries incorporating an advanced approach</p>
               </div>
-              <span class="about-meta">Our values</span>
+              <span class="about-meta mb-0 pb-0">Our values</span>
               <div class="col-md-6">
                 <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Integrity</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ingenuity</li>
+                  <li class="mb-0 pb-0"><i class="bi bi-check-circle-fill"></i> Cognisance</li>
+                  <li class="mb-0 pb-0"><i class="bi bi-check-circle-fill"></i> Diligence</li>
+                  <li class="mb-0 pb-0"><i class="bi bi-check-circle-fill"></i> Integrity</li>
+                  <li class="mb-0 pb-0"><i class="bi bi-check-circle-fill"></i> Professionalism</li>
                 </ul>
               </div>
               <div class="col-md-6">
                 <ul class="feature-list">
-                  <li><i class="bi bi-check-circle-fill"></i> Entrepreneurship</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Team Spirit</li>
+                  <li class="mb-0 pb-0"><i class="bi bi-check-circle-fill"></i> Honesty</li>
+                  <li class="mb-0 pb-0"><i class="bi bi-check-circle-fill"></i> Obedience</li>
+                  <li class="mb-0 pb-0"><i class="bi bi-check-circle-fill"></i> Trust</li>
                 </ul>
               </div>
             </div>
 
-            <!-- <div class="info-wrapper">
+            <div class="info-wrapper">
               <div class="row gy-4">
-                <div class="col-lg-5">
+                <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
                   <div class="profile d-flex align-items-center gap-3">
-                    <img src="assets/img/avatar-1.webp" alt="CEO Profile" class="profile-image">
-                    <div>
-                      <h4 class="profile-name">Mario Smith</h4>
-                      <p class="profile-position">CEO &amp; Founder</p>
-                    </div>
+                    <img src="assets/img/logo.png" alt="CEO Profile" class="profile-image">
                   </div>
                 </div>
-                <div class="col-lg-7">
+                <div class="col-lg-9" data-aos="fade-up" data-aos-delay="200">
                   <div class="contact-info d-flex align-items-center gap-2">
                     <i class="bi bi-telephone-fill"></i>
                     <div>
                       <p class="contact-label">Call us anytime</p>
-                      <p class="contact-number">+123 456-789</p>
+                      <p class="contact-number">+254 728 367 885</p>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
           </div>
 
           <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
             <div class="image-wrapper">
               <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-                <img src="assets/img/energy_engineer_and_wind_turbines.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4">
+                <img src="assets/img/eng.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4" style="max-height: 80vh; width: 100%">
                 <img src="assets/img/solar-power-6860359_1280.jpg" alt="Team Discussion" class="img-fluid small-image rounded-4">
               </div>
               <div class="experience-badge floating">
@@ -259,142 +285,91 @@
       </div>
 
     </section><!-- /About Section -->
-
-    <!-- Features Section -->
+        <!-- Energy production Section -->
     <section id="features" class="features section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>What we do</h2>
+        <h2 style="color: #1cade1;">Need for Green Energy Production</h2>
       </div><!-- End Section Title -->
-
       <div class="container">
-
-        <div class="d-flex justify-content-center">
-
-          <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
-
-            <li class="nav-item">
-              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
-                <h4>Energy Producer</h4>
-              </a>
-            </li><!-- End tab nav item -->
-
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
-                <h4>Service Provider</h4>
-              </a><!-- End tab nav item -->
-
-            </li>
-          </ul>
-
-        </div>
-
-        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-
+        <div class="" data-aos="fade-up" data-aos-delay="200">
           <div class="tab-pane fade active show" id="features-tab-1">
             <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Energy Producers</h3>
                 <p class="fst-italic">
-                  Through its multiple solar, wind, hydro, biomass and storage activities, Ecotrunk is a committed player alongside territories and communities to improve the global environment.
+                  The energy supply sector is the largest contributor to global greenhouse gas (GHG)
+                  emissions where rapid economic growth (with the associated higher demand for power,
+                  heat, and transport services) and an increase of the share of coal in the global fuel mix are
+                  the main contributors to this trend. Therefore the swift adoption of renewable energy
+                  solutions constitute safe, reliable and affordable pathways capable of achieving the energy-
+                  related carbon-dioxide (CO2) emission reductions required to meet both nationally and
+                  globally pledged climate change goals.
                 </p>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <!-- <img src="assets/img/features-illustration-1.webp" alt="" class="img-fluid"> -->
-                <video src="assets/img/wind.mp4" autoplay muted  style="width: 100%; height: auto; border-radius: 10px;" loop></video>
-              </div>
             </div>
-          </div><!-- End tab content item -->
-
-          <div class="tab-pane fade" id="features-tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Service Provider</h3>
-                <p class="fst-italic">
-                  Ecotrunk is a service provider and supports its customers in renewable energy during all stages of projects, from conception to operation and maintenance.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <!-- <img src="assets/img/wind-4737_256.gif" alt="" class="img-fluid" style="width: 100%; height: auto"> -->
-
-                <video src="assets/img/hero-video.mp4" autoplay muted  style="width: 100%; height: auto; border-radius: 10px;" loop></video>
-              </div>
-            </div>
-          </div><!-- End tab content item -->
-
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Features Section -->
+    </section>
 
     <section id="features-cards" class="features-cards section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Services</h2>
+        <h2 style="color: #1cade1;">Technologies</h2>
+        <p>Our Renewable Energy consultancy services comprise a heterogeneous class of
+          technologies which include the following</p>
       </div><!-- End Section Title -->
       <div class="container-fluid">
         <div class="row ">
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="feature-box orange" style="background-color: #0002">
               <div class="feature-inner">
                 <!-- Front Side -->
                 <div class="feature-front">
                   <img src="assets/img/solar.jpg" alt="Solar" class="feature-image">
-                  <h4>Solar</h4>
+                  <h4>Solar Energy</h4>
                 </div>
                 <span></span>
                 <!-- Back Side -->
                 <div class="feature-back">
-                  <p>Photovoltaics have become highly competitive and widely available, with significant price reductions in recent years. Advances in technology have driven down the cost of equipment and installation. The widespread adoption of solar energy has enhanced expertise, streamlined production, and optimized construction processes, making solar a leading renewable energy option.</p>
+                  <p><b>Solar Energy</b> technology harnesses the energy of solar irradiance to produce
+                    electricity using photovoltaics (PV) and concentrating solar power (CSP), to produce thermal
+                    energy (heating or cooling, either through passive or active means), to meet direct lightingneeds and, potentially, to produce fuels that might be used for transport and other
+                    purposes.</p>
                   <a href="#" class="btn-link">Learn More</a>
                 </div>
               </div>
             </div>
           </div>
     
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="feature-box blue "  style="background-color: #4002">
               <div class="feature-inner">
                 <div class="feature-front">
                   <img src="assets/img/windmill.jpg" alt="Wind" class="feature-image">
-                  <h4>Wind</h4>
+                  <h4>Wind Energy</h4>
                 </div>
                 <span></span>
                 <div class="feature-back">
-                  <p>Wind energy is a cost-effective way to generate electricity with numerous benefits. Its resource—wind—is unlimited and sustainable. Wind turbines generate power without producing greenhouse gases, and the installations are fully reversible, allowing the site to be restored to its original state after use.</p>
+                  <p><b>Wind Energy</b> harnesses the kinetic energy of moving air. The primary application of
+                    relevance to climate change mitigation is to produce electricity from large wind turbines
+                    located on land (onshore) or in sea- or freshwater (offshore).</p>
                   <a href="#" class="btn-link">Learn More</a>
                 </div>
               </div>
             </div>
           </div>
     
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="feature-box green"   style="background-color: #0402">
-              <div class="feature-inner">
-                <div class="feature-front">
-                  <img src="assets/img/biomass.png" alt="Biomass" class="feature-image">
-                  <h4>Biomass</h4>
-                </div>
-                <span></span>
-                <div class="feature-back">
-                  <p>Biomass not only contributes to the growth of renewable energy but also engages local communities, fostering regional economic activity. It offers multiple benefits to the areas where it is developed, including energy generation, economic growth, and environmental advantages, making it a valuable renewable resource.</p>
-                  <a href="/biomass" class="btn-link">Learn More</a>
-                </div>
-              </div>
-            </div>
-          </div>
     
-          <div class="col-xl-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="feature-box red"   style="background-color: #0042">
               <div class="feature-inner">
                 <div class="feature-front">
                   <img src="assets/img/hydro.jpg" alt="Hydro" class="feature-image">
-                  <h4>Hydro</h4>
+                  <h4>Hydropower</h4>
                 </div>
                 <span></span>
                 <div class="feature-back">
-                  <p>Hydropower remains one of the most cost-effective sources of stable, non-intermittent energy in many countries. When combined with storage systems, it supports the integration of cheaper, intermittent energy sources. Well-designed hydropower projects achieve low carbon emissions, high energy efficiency, and reliability, making them a dependable and sustainable energy solution.</p>
+                  <p><b>Hydropower</b> harnesses the energy of water moving from higher to lower elevations,
+                    primarily to generate electricity. Hydropower projects encompass dam projects with
+                    reservoirs, run-of-river and in-stream projects and cover a continuum in project scale.</p>
                   <a href="#" class="btn-link">Learn More</a>
                 </div>
               </div>
@@ -403,50 +378,237 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- Core Business Section -->
+    <section id="core" class="core section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Core Business</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/pmt.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <a href="proj_dev.html#projectDevpt" class="stretched-link">
+                  <h3 data-aos="fade-up" data-aos-delay="100">Project Development & Management</h3>
+                </a>
+                <p>
+                  The strategic planning, administration,and controlling of a project during its development life cycle, from project planning
+                </p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/esd.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-broadcast"></i>
+                </div>
+                <a href="engineering_systems.html#projectDevpt" class="stretched-link">
+                  <h3  data-aos="fade-up" data-aos-delay="100">Engineering Systems Development</h3>
+                </a>
+                <p>
+                  With our deep expertise, we are able to identify a problem of a system’s function, focusing on its physical aspects, and develop a solution based on consumer needs
+                </p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/pc.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-easel"></i>
+                </div>
+                <a href="consultancy.html#consultancy" class="stretched-link">
+                  <h3 data-aos="fade-up" data-aos-delay="100">Project Consultancy</h3>
+                </a>
+                <p>
+                  Offering expert advice and recommendation to clients regarding project management.
+                </p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-6 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+            <div class="service-item">
+              <div class="img">
+                <img src="assets/img/pse.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="details position-relative">
+                <div class="icon">
+                  <i class="bi bi-bounding-box-circles"></i>
+                </div>
+                <a href="p&sem.html#procurement_supply" class="stretched-link">
+                  <h3  data-aos="fade-up" data-aos-delay="100">Procurement & Supply of Engineering/Construction Materials</h3>
+                </a>
+                <p>Providing expertise in front-end engineering and design, engineering, procurement, and construction, as well as commissioning and operations.</p>
+                <a href="service-details.html" class="stretched-link"></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /core-business Section -->
+    <!-- /Energy production Section -->
+   
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action business-model section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="text-center">Fully Integrated Business Model</h2>
+        <h3 style="color: #d86110; font-weight: 900"  data-aos="fade-up" data-aos-delay="100">Resettlement Planning</h3>
         <div class="row content justify-content-center align-items-center position-relative">
           <div class="col-lg-8 mx-auto text-center">
             <div class="d-flex justify-content-between">
-              <div class="intro">
-                <p>To produce renewable electricity, Ecotrunk develops, builds, operates, and maintains its own power plants</p>
+              <div class="swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": "auto",
+                    "pagination": {
+                      "el": ".swiper-pagination",
+                      "type": "bullets",
+                      "clickable": true
+                    }
+                  }
+                </script>
+                <div class="swiper-wrapper">
+      
+                  <div class="swiper-slide">
+                    <!-- customer section -->
+                    <div class="customer-item p-4 shadow rounded">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img src="assets/img/karen.jpg" class="customer-img rounded-4 mb-3" alt="Daughters of Charity, Karen">
+                        </div>
+                        <div class="col-md-8">
+                          <h3 class="text-primary">Daughters of Charity, Karen</h3>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">Project Details:</span>
+                          </p>
+                          <ul class="list-unstyled text-dark">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>PV Modules: 192×270</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>PV Inverters: 2×25000</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Battery Inverters: 6 SMA SI 8.0</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Batteries: 48 BAE 18PVV 3420</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>SMA Multi Cluster Box: 12.3.20</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>SMA Grid Connect Box: 12.3.20</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="customer-item p-4 shadow rounded">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img src="assets/img/nakuru.jpg" class="customer-img rounded-4 mb-3" alt="Megapark, Nakuru">
+                        </div>
+                        <div class="col-md-8">
+                          <h3 class="text-primary">Megapark, Nakuru</h3>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">System Details:</span>
+                          </p>
+                          <ul class="list-unstyled text-dark">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Solar Panels: 464×250W</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>PV Inverters: 6×25000 SMA STP</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Mounting Structures: Aluminum Roof Mount</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="customer-item p-4 shadow rounded">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img src="assets/img/kimfay.jpg" class="customer-img rounded-4 mb-3" alt="Kimfay East Africa, Mombasa Rd">
+                        </div>
+                        <div class="col-md-8">
+                          <h3 class="text-primary">Kimfay East Africa, Mombasa Rd</h3>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">System Details:</span>
+                          </p>
+                          <ul class="list-unstyled text-dark">
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Solar Panels: 382×325W</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>PV Inverters: 6 Solar Edge Inverters</li>
+                            <li><i class="bi bi-check-circle text-success me-2"></i>Mounting Structures: Aluminum Roof Mount</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="customer-item p-4 shadow rounded">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img src="assets/img/bungoma.jpg" class="customer-img rounded-4 mb-3" alt="Bungoma County">
+                        </div>
+                        <div class="col-md-8">
+                          <h3 class="text-primary">Bungoma County</h3>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">Scope of Work:</span> Installation of 0.5 – 7.5KW solar power solution to maternity wings in 33 health facilities.
+                          </p>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">Project Duration:</span> 3 Months
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="customer-item p-4 shadow rounded">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img src="assets/img/rea.jpg" class="customer-img rounded-4 mb-3" alt="REA (now REREC)">
+                        </div>
+                        <div class="col-md-8">
+                          <h3 class="text-primary">REA (now REREC)</h3>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">Project Scope:</span> 60KW Hybrid System
+                          </p>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">Location:</span> Lowareng, Turkana County
+                          </p>
+                          <p class="mt-2 text-secondary">
+                            <span class="font-weight-bold">Project Duration:</span> 3 Months
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- customer section -->
+                </div>
+                <div class="swiper-pagination">
+                  
+                </div>
               </div>
-              <div class="diagram">
-                <div class="circle energy-producer">ENERGY<br>PRODUCER</div>
-                <div class="circle synergy">SYNERGY</div>
-                <div class="circle service-provider">SERVICE<br>PROVIDER</div>
-              </div>
-              <div class="description">
-                <p>Ecotrunk supports its clients throughout the entire value chain of a renewable project (development, project transfers, ready-to-build, operating service, maintenance, etc.)</p>
-              </div>
-            </div>
-            <div class="stages">
-              <div class="stage">
-                <h3>DEVELOPMENT<br><span>2 - 8 years</span></h3>
-                <ul>
-                  <li>Land negotiation, design of power plants, obtaining permits</li>
-                  <li>PPA negotiation or participation in auctions</li>
-                  <li>Project funding</li>
-                </ul>
-              </div>
-              <!-- <div class="stage">
-                <h3>EPC<br><span>1 - 2 years</span></h3>
-                <ul>
-                  <li>Engineering</li>
-                  <li>Procurement</li>
-                  <li>Construction management</li>
-                </ul>
-              </div> -->
-              <div class="stage">
-                <h3>O&M<br><span>15 - 40 years</span></h3>
-                <ul>
-                  <li>Power plant operation</li>
-                  <li>Equipment maintenance</li>
-                </ul>
-              </div>
+      
             </div>
           </div>
           <!-- Abstract Background Elements -->
@@ -576,52 +738,58 @@
     <!-- Clients Section -->
     <section id="clients" class="clients section">
       <div class="p-0 m-1 section-title" data-aos="fade-up">
-        <h2>Partners</h2>
+        <h2>Affiliations</h2>
       </div><!-- End Section Title -->
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 800,
+                "autoplay": {
+                  "delay": 3000
                 },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
                 },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 40
+                  },
+                  "480": {
+                    "slidesPerView": 3,
+                    "spaceBetween": 60
+                  },
+                  "640": {
+                    "slidesPerView": 4,
+                    "spaceBetween": 80
+                  },
+                  "992": {
+                    "slidesPerView": 8,
+                    "spaceBetween": 50
+                  }
                 }
               }
-            }
-          </script>
-          <div class="swiper-wrapper d-flex justify-content-center align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            </script>
+            <div class="swiper-wrapper d-flex justify-content-center align-items-center">
+              <div class="swiper-slide"><img src="assets/img/kncci.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/nca.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/nema.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/kerea.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/rerec.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/kplc.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/epra.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/kerea.jpg" class="img-fluid" alt=""></div>
+              <div class="swiper-slide"><img src="assets/img/ketraco.jpg" class="img-fluid" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
       </div>
 
     </section><!-- /Clients Section -->
@@ -630,7 +798,7 @@
       <div class="container-fluid py-4">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Locations</h2>
+          <h2>Contact</h2>
         </div><!-- End Section Title -->
         <div class="row">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.9740324042277!2d36.744172703842125!3d-1.3047056087323772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1baead3d1909%3A0x6119cc9982d3136b!2sNgong%20Road%20Professional%20Center!5e1!3m2!1sen!2ske!4v1733930865436!5m2!1sen!2ske" width="100%" height="450" style="border:0; padding: 0; margin: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
