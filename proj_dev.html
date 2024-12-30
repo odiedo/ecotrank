@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ecotrunk</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- <link href="assets/css/energy_producer.css" rel="stylesheet"> -->
+  <style>
+    :root {
+        --primary-green: #0d83fd;
+        --secondary-green: #0d81fdb4;
+        --light-background: #f4f9f4;
+    }
+
+    .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .application-steps {
+        background-color: var(--light-background);
+        padding: 50px 0;
+    }
+    .application-steps .card {
+        height: 250px;
+    }
+
+    .testimonial-section {
+        background-color: white;
+        padding: 50px 0;
+    }
+    .team-carousel {
+        position: relative;
+        overflow: hidden;
+        background-color: #f4f4f4;
+    }
+    .team-carousel h5 {
+        color: #d86110;
+        font-weight: 900;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    .carousel-caption {
+        background: rgba(0,0,0,0.6);
+        border-radius: 10px;
+        padding: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .team-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: 0.5s ease;
+    }
+    .carousel-item:hover .team-overlay {
+        height: 100%;
+    }
+    .team-social {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+    .carousel-item:hover .team-social {
+        opacity: 1;
+    }
+    .team-social .btn {
+        margin: 0 10px;
+        background: rgba(255,255,255,0.2);
+        color: white;
+        border: none;
+        transition: all 0.3s;
+    }
+    .team-social .btn:hover {
+        transform: scale(1.2);
+        background: #d86110;
+    }
+
+    .timeline {
+        position: relative;
+        padding: 10px 0;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #0d83fd, #0d83fd);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-item {
+        padding: 20px;
+        position: relative;
+        margin-bottom: 30px;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+    }
+    .timeline-item.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .timeline-item:nth-child(even) {
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd) {
+        text-align: right;
+    }
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #06478b;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 4px solid white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .timeline-content {
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .timeline-content h2 {
+        color: #d86110 ;
+        font-weight: 900;
+        margin-bottom: 15px;
+    }
+    .badge-gw {
+        background-color: #d86110;
+        color: white;
+        font-size: 1.2em;
+        margin: 10px 0;
+        display: inline-block;
+    }
+    .timeline-content .projects {
+        color: #555;
+        font-style: italic;
+    }
+  </style>
+</head>
+<body class="service-details-page">
+
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <img src="assets/img/logo.png" alt="">
+            <!-- <h1 class="sitename">Ecotrunk</h1> -->
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="about.html#values">Our Values</a></li>
+                  <li><a href="about.html#history">History</a></li>
+                  <li><a href="about.html#covid">Covid-19 Response</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="proj_dev.html#projectDevpt" class="active">Project Development & Management</a></li>
+                  <li><a href="engineering_systems.html#projectDevpt">Engineering Systems Development</a></li>
+                  <li><a href="consultancy.html#consultancy">Consultancy</a></li>
+                  <li><a href="p&sem.html#procurement_supply">Procurement & Supply of Engineering Materials</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Technology</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="technology.html#hydropower">Hydropower</a></li>
+                  <li><a href="technology.html#solar">Solar</a></li>
+                  <li><a href="technology.html#wind">Wind</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Customer</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="customer.html#energy">Energy-dependant Sectors</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="media.html">Media Gallery</a></li>
+                  <li><a href="resources.html">Press Releases</a></li>
+                  <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+          <a class="btn-getstarted" href="index.html#about">Get Started</a>
+    
+        </div>
+    </header>
+
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title light-background">
+            <!-- <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/img/solar_vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <img src="assets/img/paper.jpg" class="hero-video" alt="">
+            
+            <div class="gradient-overlay-pages"></div>
+            <div class="container">
+                <h1>Development</h1>
+                <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Service Provider</li>
+                    <li class="current">Development</li>
+                </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- End Page Title -->
+        <!-- Development Section -->
+        <section id="services" class="services section light-background">
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-4">
+                    <div class="col-lg-8 col-md-8">
+                        <h3 style="font-weight: 900; color: #d86110;">Development</h3>
+                        <p>Ecotrunk’s dedicated teams manage every stage of project development, from evaluating site potential and securing prime locations to initiating construction after obtaining all necessary permits and authorizations.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4">
+                        <img src="assets/img/paper.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Project Development Phases -->
+        <section class="team-carousel py-5">
+            <div class="container-fluid">
+                <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                    <h2>Project Development & Management</h2>
+                </div>
+                <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    </div>
+                    
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/Site_Identification.jpg" class="d-block w-100" alt="Team Collaboration">
+                            <div class="team-overlay">
+                                <div class="team-social d-flex justify-content-center align-items-center h-100">
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Site Identification & Feasibility Studies</h5>
+                                <p>We carefully select the best locations for power generation by conducting resource assessments (using advanced software and campaigns) and evaluating production capacity. During this phase, we also assess potential environmental and social impacts, identifying solutions for land and grid connections.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="assets/img/Environmental.jpeg" class="d-block w-100" alt="Team Workshop">
+                            <div class="team-overlay">
+                                <div class="team-social d-flex justify-content-center align-items-center h-100">
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Environmental & Social Studies</h5>
+                                <p>Ecotrunk rigorously evaluates all project sites to understand the potential impact on the environment and local communities. Our studies also include mitigation measures to minimize impact while fostering sustainable local development.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="assets/img/Grid Connection Studies.webp" class="d-block w-100" alt="Team Celebration">
+                            <div class="team-overlay">
+                                <div class="team-social d-flex justify-content-center align-items-center h-100">
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Grid Connection Studies</h5>
+                                <p>Grid connection is essential for a successful renewable energy project. Ecotrunk performs detailed assessments of the power infrastructure at substations where plants will be connected, ensuring seamless integration.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <img src="assets/img/solar-power-6860359_1280.jpg" class="d-block w-100" alt="Global Team">
+                            <div class="team-overlay">
+                                <div class="team-social d-flex justify-content-center align-items-center h-100">
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Project Design</h5>
+                                <p>Our engineering team designs plants to optimize power production based on site constraints, available resources, and grid capacity, ensuring efficiency throughout all development phases.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/land_securing.jpg" class="d-block w-100" alt="Global Team">
+                            <div class="team-overlay">
+                                <div class="team-social d-flex justify-content-center align-items-center h-100">
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Land Securing</h5>
+                                <p>Land plays a critical role in renewable energy projects. We collaborate with landowners, public or private, and engage with local communities to ensure public acceptance. Negotiations include agreements and rents for land use.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/permit.jpg" class="d-block w-100" alt="Global Team">
+                            <div class="team-overlay">
+                                <div class="team-social d-flex justify-content-center align-items-center h-100">
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Permitting</h5>
+                                <p>Compliance with local regulations is paramount. Ecotrunk secures licenses, permits, and other authorizations from regulatory bodies early in the project lifecycle to avoid delays and maintain smooth progress.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/further.jpg" class="d-block w-100" alt="Global Team">
+                            <div class="team-overlay">
+                                <div class="team-social d-flex justify-content-center align-items-center h-100">
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-light rounded-circle"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Further Steps in the Development Process</h5>
+                                <p>
+                                    <ul>
+                                        <li>Participation in Tenders/Auctions</li>
+                                        <li>Project Financing or Due Diligence</li>
+                                        <li>Offtaker Negotiations</li>
+                                    </ul>                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Past Experience -->
+        <div class="container-fluid py-5 text-center" style="background-color: #0001;">
+            <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                <h2>Our Experience</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    EcoTrunk has a broad resource of technical expertise and experience in project Feasibility Studies. Below is a summary of
+                    the projects the firm has planned, implemented, and successfully executed.
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="10">
+                    <div class="timeline">
+                        <!--Feasibility Studies  -->
+                        <div class="timeline-item" data-region="SiteIdentification">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h2>Feasibility Studies</h2>
+                                        <p>Feasibility study for the proposed 60 MW
+                                          Embobut Hydro-Plant, Sosian Energy.</p>
+                                        <center><i class="bi bi-arrow-down"></i></center>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="assets/img/Site_Identification.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-region="EnvironmentalStudies">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="assets/img/Environmental.jpeg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h2>Feasibility Studies</h2>
+                                        <p>Feasibility study for the 30.5 MW
+                                            Muhoroni Solar Farms; Inowind Kenya
+                                            Limited.</p>
+                                        <center><i class="bi bi-arrow-down"></i></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Environmental Studies -->
+                        <div class="timeline-item" data-region="GridConnection">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h2>Environmental Studies</h2>
+                                        <p>Environmental Auditing for Engineering Development Limited</p>
+                                        <center><i class="bi bi-arrow-down"></i></center>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="assets/img/Grid Connection Studies.webp" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-region="ProjectDesign">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="assets/img/solar-power-6860359_1280.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h2>Environmental Studies</h2>
+                                        <p>Environmental Impact and Social
+                                          Assessment Scoping Plan for the
+                                          proposed Samburu Hybrid Plant( Solar
+                                          and Wind)</p>
+                                        <center><i class="bi bi-arrow-down"></i></center>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Resettlement Planning -->
+                        <div class="timeline-item" data-region="LandSecuring">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h2>Resettlement Planning</h2>
+                                        <p>Detailed Resettlement
+                                          Action Plan (RAP) for the
+                                          428 Km for Loiyangalani-
+                                          Suswa 400Kv Transmission
+                                          line, KETRACO</p>
+                                        <center><i class="bi bi-arrow-down"></i></center>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="assets/img/land_securing.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-region="Permitting">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="assets/img/permit.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h2>Resettlement Planning</h2>
+                                        <p>Development of
+                                          Resettlement Action Plan
+                                          for the Olaragwi – Kipipiri
+                                          Section of the Proposed
+                                          Loiyangalani Suswa 400 kV
+                                          Transmission Line, LTWP.</p>
+                                        <center><i class="bi bi-arrow-down"></i></center>  
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-region="FurtherSteps">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h2>Resettlement Planning</h2>
+                                        <p>
+                                          Resettlement Action Plan for
+                                          the Loiyangalani-Suswa 400 kV
+                                          Transmission Line, KETRACO.
+                                        </p>
+                                        <center><i class="bi bi-arrow-down"></i></center>  
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="assets/img/further.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-region="FurtherSteps">
+                            <div class="timeline-content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="assets/img/further.jpg" class="img-fluid timeline-img" alt="" style="height: 200px; width: 100%">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h2>Resettlement Planning</h2>
+                                        <p>
+                                          Resettlement action plan
+                                          for 12KM, of 132Kv
+                                          wayleave activities,
+                                          Kinangop wind park.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer">
+
+        <div class="container-fluid footer-top">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6 footer-about">
+              <a href="index.html" class="footer-logo d-flex align-items-center">
+                <!-- <span class="sitename">Ecotrunk</span> -->
+                <img src="assets/img/logo.png" alt="" style="height: 230px; width: 100%; border-radius: 10px">
+              </a>
+            </div>
+    
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>About us</h4>
+              <ul>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">HSE</a></li>
+                <li><a href="#">Uncompromising Ethics</a></li>
+                <li><a href="#">Certificate & recognitions</a></li>
+              </ul>
+            </div>
+    
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Service Provider</h4>
+              <ul>
+                <!-- <li><a href="#">Development</a></li>
+                <li><a href="#">Maintenance (O&M)</a></li>
+                <li><a href="#">Distribution</a></li>
+                <li><a href="#">Consultancy</a></li> -->
+    
+                <li><a href="proj_dev.html#projectDevpt">Project Development & Management</a></li>
+                <li><a href="engineering_systems.html#projectDevpt">Engineering Systems Development</a></li>
+                <li><a href="consultancy.html#consultancy">Consultancy</a></li>
+                <li><a href="p&sem.html#procurement_supply">Procurement & Supply of Engineering Materials</a></li>
+    
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-about">
+              <h4>Contact us</h4>
+              <div class="footer-contact">
+                <p>Ngong Professional Centre, along Ngong Road</p>
+                <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+                <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:+254112818685">0112818685</a> / <a href="tel:+254776711966">0776711966</a></span></p>
+                <p><strong>Email:</strong> <span><a href="mailto:info@ecotrunk.co.ke">info@ecotrunk.co.ke</a></span></p>
+              </div>
+              <div class="social-links d-flex mt-4">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+    
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Newsletter</h4>
+              <p style="font-weight: 600;">Submit your Email to subscribe to our newsletter</p>
+              <!-- Form -->
+              <div class="footer-form" >
+                <div id="mc_embed_signup">
+                  <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                    <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address" class="placeholder" >
+                    <div class="form-icon">
+                      <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><i class="bi bi-send"></i></button>
+                    </div>
+                    <div class="mt-10 info"></div>
+                  </form>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+    
+        <div class="container copyright text-center mt-4">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">Ecotrunk</strong> <span>All Rights Reserved</span>
+            Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
+          </p>
+          </div>
+        </div>
+    
+      </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    function checkTimeline() {
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const itemBottom = item.getBoundingClientRect().bottom;
+            
+            if (itemTop < window.innerHeight * 0.8 && itemBottom > 0) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkTimeline);
+    window.addEventListener('load', checkTimeline);
+</script>
+</body>
+
+</html>

@@ -51,6 +51,10 @@
         width: 50%;
         padding: 10px 0;
     }
+    .history-item h6 {
+        color: #d86110;
+        font-weight: 700;
+    }
     .history-item img {
         width: 60px;
         height: 60px;
@@ -122,437 +126,471 @@
 </head>
 <body class="service-details-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">ecotrunk</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="">Home</a></li>
-          <li><a href="about.html" class="active"><span>About</span></a></li>
-          <li class="dropdown"><a href="#"><span>What we do</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#"></a></li>
-              <li><a href="energy_producer.html">Energy Producer</a></li>
-              <li><a href="service_provider.html">Service Provider </a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>News</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#"></a></li>
-              <li><a href="news.html">News</a></li>
-              <li><a href="blogs.html">Blogs </a></li>
-            </ul>
-          </li>
-          <li><a href="careers.html">Careers</a></li>
-          <li class="dropdown"><a href="#"><span>Investors</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-              <li><a href="#"></a></li>
-              <li><a href="investors.html">Overview</a></li>
-              <li><a href="investors.html?#finance">Financial Results & Reports </a></li>
-              <li><a href="about.html?#management">Governance</a></li>
-              <li><a href="investors.html#regulated">Regulated information</a></li>
-              <li><a href="investors.html#shareholders">Shareholders</a></li>
-              <li><a href="investors.html#debtFinance.html">Debt & Financing</a></li>
-              <li><a href="investors.html#informed">Stay Informed</a></li>
-              </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title light-background">
-      <!-- <video autoplay muted loop playsinline class="hero-video">
-        <source src="assets/img/solar_vid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video> -->
-      <img src="assets/img/about.jpg" class="hero-video" alt="">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
     
-      <div class="gradient-overlay-pages"></div>
-      <div class="container">
-        <h1>About us</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">About us</li>
-          </ol>
-        </nav>
-      </div>
-    </div>
-    <!-- End Page Title -->
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 align-items-center justify-content-between">
-
-          <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
-            <span class="about-meta">ABOUT ECOTRUNK</span>
-            <!-- <h2 class="about-title">Voluptas enim suscipit temporibus</h2> -->
-            <p class="about-description">Established in Kenya in 2014, Ecotrunk has evolved into a global leader as a Renewable Energy Producer and Service Provider. We specialize in eco-friendly energy solutions, empowering our clients to participate in the worldwide shift towards sustainability and clean energy.</p>
-
-            <div class="row feature-list-wrapper">
-              <div class="col-md-12">
-                <span class="about-meta">Our Mission</span>
-                <p>Enhancing the global environment while driving local growth and development.</p>
-              </div>
-            </div>
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <img src="assets/img/logo.png" alt="">
+            <!-- <h1 class="sitename">Ecotrunk</h1> -->
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li class="dropdown"><a href="#"  class="active"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="about.html#values">Our Values</a></li>
+                  <li><a href="about.html#history">History</a></li>
+                  <li><a href="about.html#covid">Covid-19 Response</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="proj_dev.html#projectDevpt">Project Development & Management</a></li>
+                  <li><a href="engineering_systems.html#projectDevpt">Engineering Systems Development</a></li>
+                  <li><a href="consultancy.html#consultancy">Consultancy</a></li>
+                  <li><a href="p&sem.html#procurement_supply">Procurement & Supply of Engineering Materials</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Technology</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="technology.html#hydropower">Hydropower</a></li>
+                  <li><a href="technology.html#solar">Solar</a></li>
+                  <li><a href="technology.html#wind">Wind</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Customer</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="customer.html#energy">Energy-dependant Sectors</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="media.html">Media Gallery</a></li>
+                  <li><a href="resources.html">Press Releases</a></li>
+                  <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+          <a class="btn-getstarted" href="index.html#about">Get Started</a>
+    
         </div>
+    </header>
 
-        <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="image-wrapper">
+    <main class="main">
+
+        <!-- Page Title -->
+        <div class="page-title light-background">
+        <!-- <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/img/solar_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+        <img src="assets/img/about.jpg" class="hero-video" alt="">
+        
+        <div class="gradient-overlay-pages"></div>
+        <div class="container">
+            <h1>About us</h1>
+            <nav class="breadcrumbs">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li class="current">About us</li>
+            </ol>
+            </nav>
+        </div>
+        </div>
+        <!-- End Page Title -->
+        <!-- About Section -->
+        <section id="about" class="about section">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4 align-items-center justify-content-between">
+            <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
+                <span class="about-meta  mb-0 pb-0">Ecotrunk International Ltd (ETL)</span>
+                <!-- <h2 class="about-title">Voluptas enim suscipit temporibus</h2> -->
+                <p class="about-description"><b>ETL</b> is a firm of Technologists, Consultants, and Managers
+                incorporated in the Republic of Kenya as a firm of Experts. The firm has broad experience in
+                Project Development & Management, Engineering Systems Development and Consultancy
+                in the renewable energy industry.
+                </p>
+
+                <div class="row feature-list-wrapper">
+                <div class="col-md-12">
+                    <span class="about-meta mb-0 pb-0">Our Mission</span>
+                    <p>To provide the most competitive energy, engineering, and construction consulting services and tools in the respective industries incorporating an advanced approach</p>
+                </div>
+
+                </div>
+
+                <div class="info-wrapper">
+                <div class="row gy-4">
+                    <div class="col-lg-9" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-info d-flex align-items-center gap-2">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div>
+                        <p class="contact-label">Call us anytime</p>
+                        <p class="contact-number">0112818685 / 0776711966</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="image-wrapper">
                 <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-                    <img src="assets/img/energy_engineer_and_wind_turbines.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4">
+                    <img src="assets/img/eng.jpg" alt="Business Meeting" class="img-fluid main-image rounded-4" style="max-height: 80vh; width: 100%">
                     <img src="assets/img/solar-power-6860359_1280.jpg" alt="Team Discussion" class="img-fluid small-image rounded-4">
                 </div>
                 <div class="experience-badge floating">
                     <h3>10+ <span>Years</span></h3>
                     <p>Of experience in renewable energy</p>
                 </div>
+                </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
-    </section><!-- /About Section -->
-    <div class="container-xxl pb-4 pt-4">
-        <div class="container">
+        </section>
+        <!-- /About Section -->
+        <section id="values" class="container-xxl pb-4 pt-4 section">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                    <h2>Our Values</h2>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Integrity</div>
+                        <p>Integrity is at our core. We deliver sustainable value through dedicated teams, respect for stakeholders, and sound guidance for informed decisions. Honesty and commitment shape our corporate culture, reflecting high ethical standards across our actions.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Ingenuity</div>
+                        <p>Innovation drives renewable energy projects. Since 2014, we’ve combined expertise and creativity to succeed, including securing major wind projects in different countries. Ingenuity remains key to our culture and success.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Entrepreneurship</div>
+                        <p>We support renewable energy projects at every stage, using agility and proactive approaches to meet client goals. Founded in 2014, we maintain an entrepreneurial spirit, embracing opportunities with a flexible organization.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Team Spirit</div>
+                        <p>Our diverse global teams engineers, environmental experts, and more—collaborate for the success of each project. From planning to operations, teamwork has been the backbone of our energy transition efforts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <!-- <section id="keyFigures" class="key-figures section">
+            <div class="container">
+                <div class="row shadow" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-activity"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>2.45 GW</h4>
+                            <p class="mb-0">Capacity in operation</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-lightning-charge"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>4.3 TWh</h4>
+                            <p class="mb-0">of clean energy produced</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>1300 +</h4>
+                            <p class="mb-0"> dedicated employees</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="bi bi-cloud-download"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h4>1643 ktons</h4>
+                            <p class="mb-0">CO<sub>2</sub> emissions avoided</p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section id="history" class="container section py-2">
+            <h2 class="text-center text-primary mb-5"></h2>
             <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-                <h2>Our Values</h2>
+                <h2>Ecotrunk History</h2>
             </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Integrity</div>
-                    <p>Integrity is at our core. We deliver sustainable value through dedicated teams, respect for stakeholders, and sound guidance for informed decisions. Honesty and commitment shape our corporate culture, reflecting high ethical standards across our actions.</p>
-                </div>
-                <div class="testimonial-item rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Ingenuity</div>
-                    <p>Innovation drives renewable energy projects. Since 2014, we’ve combined expertise and creativity to succeed, including securing major wind projects in different countries. Ingenuity remains key to our culture and success.</p>
-                </div>
-                <div class="testimonial-item rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Entrepreneurship</div>
-                    <p>We support renewable energy projects at every stage, using agility and proactive approaches to meet client goals. Founded in 2014, we maintain an entrepreneurial spirit, embracing opportunities with a flexible organization.</p>
-                </div>
-                <div class="testimonial-item rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <div class="d-inline-block border rounded-pill text-primary px-4 mb-3">Team Spirit</div>
-                    <p>Our diverse global teams engineers, environmental experts, and more—collaborate for the success of each project. From planning to operations, teamwork has been the backbone of our energy transition efforts.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services Section -->
-    <section id="keyFigures" class="key-figures section">
-        <div class="container">
-            <div class="row shadow" data-aos="fade-up" data-aos-delay="100">
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="bi bi-activity"></i>
-                    </div>
-                    <div class="stat-content">
-                        <h4>2.45 GW</h4>
-                        <p class="mb-0">Capacity in operation</p>
-                    </div>
+            <div class="history">
+                <!-- 2014 -->
+                <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/60" alt="Founded">
+                    <div class="history-content">
+                        <h6>2014: Founded Econtrank</h6>
+                        <p>Our journey began with a bold vision to transform the industry with innovative solutions.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="bi bi-lightning-charge"></i>
-                    </div>
-                    <div class="stat-content">
-                        <h4>4.3 TWh</h4>
-                        <p class="mb-0">of clean energy produced</p>
-                    </div>
+                <!-- 2016 -->
+                <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/60" alt="First Major Milestone">
+                    <div class="history-content">
+                        <h6>2016: First Milestone</h6>
+                        <p>Achieved our first significant project, marking the start of rapid growth.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="bi bi-people"></i>
-                    </div>
-                    <div class="stat-content">
-                        <h4>1300 +</h4>
-                        <p class="mb-0"> dedicated employees</p>
-                    </div>
+                <!-- 2018 -->
+                <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/60" alt="Expansion">
+                    <div class="history-content">
+                        <h6>2018: Expansion</h6>
+                        <p>Ventured into new regions, broadening our presence globally.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="bi bi-cloud-download"></i>
+                <!-- 2020 -->
+                <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/60" alt="Breakthrough">
+                    <div class="history-content">
+                        <h6>2020: Breakthrough</h6>
+                        <p>Developed cutting-edge technologies that redefined industry standards.</p>
                     </div>
-                    <div class="stat-content">
-                        <h4>1643 ktons</h4>
-                        <p class="mb-0">CO<sub>2</sub> emissions avoided</p>
+                </div>
+                <!-- 2022 -->
+                <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/60" alt="Recognition">
+                    <div class="history-content">
+                        <h6>2022: Recognition</h6>
+                        <p>Earned global recognition as a leader in the field, winning prestigious awards.</p>
                     </div>
+                </div>
+                <!-- 2024 -->
+                <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/60" alt="Future">
+                    <div class="history-content">
+                        <h6>2024: Future Vision</h6>
+                        <p>Continuing our journey with innovation and sustainability at the forefront.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="container py-2">
-        <h2 class="text-center text-primary mb-5"></h2>
-        <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-            <h2>Ecotrunk History</h2>
-        </div>
-        <div class="history">
-            <!-- 2014 -->
-            <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/60" alt="Founded">
-                <div class="history-content">
-                    <h6>2014: Founded Econtrank</h6>
-                    <p>Our journey began with a bold vision to transform the industry with innovative solutions.</p>
-                </div>
-            </div>
-            <!-- 2016 -->
-            <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/60" alt="First Major Milestone">
-                <div class="history-content">
-                    <h6>2016: First Milestone</h6>
-                    <p>Achieved our first significant project, marking the start of rapid growth.</p>
-                </div>
-            </div>
-            <!-- 2018 -->
-            <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/60" alt="Expansion">
-                <div class="history-content">
-                    <h6>2018: Expansion</h6>
-                    <p>Ventured into new regions, broadening our presence globally.</p>
-                </div>
-            </div>
-            <!-- 2020 -->
-            <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/60" alt="Breakthrough">
-                <div class="history-content">
-                    <h6>2020: Breakthrough</h6>
-                    <p>Developed cutting-edge technologies that redefined industry standards.</p>
-                </div>
-            </div>
-            <!-- 2022 -->
-            <div class="history-item left" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/60" alt="Recognition">
-                <div class="history-content">
-                    <h6>2022: Recognition</h6>
-                    <p>Earned global recognition as a leader in the field, winning prestigious awards.</p>
-                </div>
-            </div>
-            <!-- 2024 -->
-            <div class="history-item right" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/60" alt="Future">
-                <div class="history-content">
-                    <h6>2024: Future Vision</h6>
-                    <p>Continuing our journey with innovation and sustainability at the forefront.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
 
         <!-- Services Section -->
-    <section id="services" class="services section ">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <img src="assets/img/hydro.jpg" alt="" class="image-fluid" style=" width: 100%; height: auto;">
-            </div><!-- End Service Card -->
-            <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card d-flex">
-                    <div>
-                        <h3>Sustainability</h3>
-                        <p>Since its establishment in 2014, Ecotrunk has been deeply dedicated to enhancing the global environment while promoting local development. Believing that renewable energy is where human progress and climate protection converge, Ecotrunk's teams strive to create the most innovative and customized solutions for a sustainable future.</p>
-                        <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
-                    </div>
+        <section id="services" class="services section ">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/img/hydro.jpg" alt="" class="image-fluid" style=" width: 100%; height: auto;">
                 </div>
-            </div><!-- End Service Card -->
+                <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card d-flex">
+                        <div>
+                            <h3>Sustainability</h3>
+                            <p>Since its establishment in 2014, Ecotrunk has been deeply dedicated to enhancing the global environment while promoting local development. Believing that renewable energy is where human progress and climate protection converge, Ecotrunk's teams strive to create the most innovative and customized solutions for a sustainable future.</p>
+                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div><!-- End Service Card -->
 
 
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-    <br>
-
-    <section id="management" class="key-figures section features-cards">
-        <div class="container py-5">
-            <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-                <h2>Ecotrunk Management Team</h2>
             </div>
-            <div class="row row-cols-1 row-cols-md-3 g-4" data-aos="fade-up" data-aos-delay="50">
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Ahmed Al-Farsi" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Ahmed Al-Farsi</h5>
-                            <p class="card-text text-muted">Chief Executive Officer</p>
+
+        </div>
+
+        </section><!-- /Services Section -->
+        <br>
+
+        <section id="management" class="key-figures section features-cards">
+            <div class="container py-5">
+                <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+                    <h2>Ecotrunk Management Team</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4" data-aos="fade-up" data-aos-delay="50">
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Ahmed Al-Farsi" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Ahmed Al-Farsi</h5>
+                                <p class="card-text text-muted">Chief Executive Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Fatima Ndungu" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Fatima Ndungu</h5>
+                                <p class="card-text text-muted">Head of Europe, Africa, and International (EAI)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Mohammed El-Sayed" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Mohammed El-Sayed</h5>
+                                <p class="card-text text-muted">Head of Human Resources and Support Functions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Aisha Abubakar" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Aisha Abubakar</h5>
+                                <p class="card-text text-muted">Chief Finance Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Omar Hassan" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Omar Hassan</h5>
+                                <p class="card-text text-muted">Deputy CEO and Chairman of Helexia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Habiba Mussa" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Habiba Mussa</h5>
+                                <p class="card-text text-muted">Head of Latin America and North Africa (ALAN)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Ibrahim Khaled" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Ibrahim Khaled</h5>
+                                <p class="card-text text-muted">Head of France and Overseas Territories (FOM)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Management Member -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm">
+                            <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Zainab Yusuf" style="width: 120px; height: 120px; border-radius: 50%;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Zainab Yusuf</h5>
+                                <p class="card-text text-muted">Head of Operations and Services</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Fatima Ndungu" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Fatima Ndungu</h5>
-                            <p class="card-text text-muted">Head of Europe, Africa, and International (EAI)</p>
-                        </div>
+            </div>    
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container-fluid footer-top">
+        <div class="row gy-4">
+            <div class="col-lg-3 col-md-6 footer-about">
+            <a href="index.html" class="footer-logo d-flex align-items-center">
+                <!-- <span class="sitename">Ecotrunk</span> -->
+                <img src="assets/img/logo.png" alt="" style="height: 230px; width: 100%; border-radius: 10px">
+            </a>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+            <h4>About us</h4>
+            <ul>
+                <li><a href="#">Sustainability</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">HSE</a></li>
+                <li><a href="#">Uncompromising Ethics</a></li>
+                <li><a href="#">Certificate & recognitions</a></li>
+            </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Service Provider</h4>
+            <ul>
+                <!-- <li><a href="#">Development</a></li>
+                <li><a href="#">Maintenance (O&M)</a></li>
+                <li><a href="#">Distribution</a></li>
+                <li><a href="#">Consultancy</a></li> -->
+
+                <li><a href="proj_dev.html#projectDevpt">Project Development & Management</a></li>
+                <li><a href="engineering_systems.html#projectDevpt">Engineering Systems Development</a></li>
+                <li><a href="consultancy.html#consultancy">Consultancy</a></li>
+                <li><a href="p&sem.html#procurement_supply">Procurement & Supply of Engineering Materials</a></li>
+
+            </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-about">
+            <h4>Contact us</h4>
+            <div class="footer-contact">
+                <p>Ngong Professional Centre, along Ngong Road</p>
+                <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+                <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:+254112818685">0112818685</a> / <a href="tel:+254776711966">0776711966</a></span></p>
+                <p><strong>Email:</strong> <span><a href="mailto:info@ecotrunk.co.ke">info@ecotrunk.co.ke</a></span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Newsletter</h4>
+            <p style="font-weight: 600;">Submit your Email to subscribe to our newsletter</p>
+            <!-- Form -->
+            <div class="footer-form" >
+                <div id="mc_embed_signup">
+                <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                    <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address" class="placeholder" >
+                    <div class="form-icon">
+                    <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><i class="bi bi-send"></i></button>
                     </div>
-                </div>
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Mohammed El-Sayed" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Mohammed El-Sayed</h5>
-                            <p class="card-text text-muted">Head of Human Resources and Support Functions</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Aisha Abubakar" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Aisha Abubakar</h5>
-                            <p class="card-text text-muted">Chief Finance Officer</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Omar Hassan" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Omar Hassan</h5>
-                            <p class="card-text text-muted">Deputy CEO and Chairman of Helexia</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Habiba Mussa" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Habiba Mussa</h5>
-                            <p class="card-text text-muted">Head of Latin America and North Africa (ALAN)</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Ibrahim Khaled" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Ibrahim Khaled</h5>
-                            <p class="card-text text-muted">Head of France and Overseas Territories (FOM)</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Management Member -->
-                <div class="col">
-                    <div class="card border-0 shadow-sm">
-                        <img src="https://via.placeholder.com/150" class="card-img-top mx-auto mt-3" alt="Zainab Yusuf" style="width: 120px; height: 120px; border-radius: 50%;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title text-primary">Zainab Yusuf</h5>
-                            <p class="card-text text-muted">Head of Operations and Services</p>
-                        </div>
-                    </div>
+                    <div class="mt-10 info"></div>
+                </form>
                 </div>
             </div>
-        </div>    
-    </section>
-  </main>
-
-  <footer id="footer" class="footer">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">ecotrunk</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Professional Centre Off Ngong Road</p>
-            <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+254 728 367 885</span></p>
-            <p><strong>Email:</strong> <span>info@ecotrunk.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+            
+            </div>
+        </div>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>About us</h4>
-          <ul>
-            <li><a href="#">Sustainability</a></li>
-            <li><a href="#">Our Mission</a></li>
-            <li><a href="#">HSE</a></li>
-            <li><a href="#">Uncompromising Ethics</a></li>
-            <li><a href="#">Certificate & recognitions</a></li>
-          </ul>
+        <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Ecotrunk</strong> <span>All Rights Reserved</span>
+            Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
+        </p>
+        </div>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Energy Producer</h4>
-          <ul>
-            <li><a href="#">Corporate PPA</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Service Provider</h4>
-          <ul>
-            <li><a href="#">Development</a></li>
-            <li><a href="#">Maintenance (O&M)</a></li>
-            <li><a href="#">Distribution</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Investors</h4>
-          <ul>
-            <li><a href="#">Financial results & reports</a></li>
-            <li><a href="#">Governance</a></li>
-            <li><a href="#">Share price</a></li>
-            <li><a href="#">Stay informed</a></li>
-            <li><a href="#">Regulated information</a></li>
-            <li><a href="#">Shareholders</a></li>
-            <li><a href="#">Debt and Financing</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">ecotrunk</strong> <span>All Rights Reserved</span>
-        Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
-      </p>
-      </div>
-    </div>
-
-  </footer>
+    </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
