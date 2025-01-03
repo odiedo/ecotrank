@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Ecotrunk</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+  
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+    .portfolio .portfolio-filters {
+        padding: 0;
+        margin: 0 auto 20px auto;
+        list-style: none;
+        text-align: center;
+    }
+
+    .portfolio .portfolio-filters li {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 10px;
+        line-height: 1;
+        margin-bottom: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .portfolio .portfolio-filters li:hover,
+    .portfolio .portfolio-filters li.filter-active {
+        color: var(--accent-color);
+    }
+
+    .portfolio .portfolio-filters li:first-child {
+        margin-left: 0;
+    }
+
+    .portfolio .portfolio-filters li:last-child {
+        margin-right: 0;
+    }
+
+    @media (max-width: 575px) {
+        .portfolio .portfolio-filters li {
+            font-size: 14px;
+            margin: 0 5px;
+        }
+    }
+
+    .portfolio .portfolio-content {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .portfolio .portfolio-content img {
+        transition: 0.3s;
+    }
+    .portfolio .portfolio-item img {
+        height: 250px;
+        width: 100%;
+    }
+
+    .portfolio .portfolio-content .portfolio-info {
+        opacity: 0;
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        transition: all ease-in-out 0.3s;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+    }
+
+    .portfolio .portfolio-content .portfolio-info h4 {
+        font-size: 14px;
+        padding: 5px 10px;
+        font-weight: 400;
+        color: #ffffff;
+        display: inline-block;
+        background-color: var(--accent-color);
+    }
+
+    .portfolio .portfolio-content .portfolio-info p {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        display: inline-block;
+        left: 0;
+        right: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .portfolio .portfolio-content .portfolio-info .preview-link,
+    .portfolio .portfolio-content .portfolio-info .details-link {
+        position: absolute;
+        left: calc(50% - 40px);
+        font-size: 26px;
+        top: calc(50% - 14px);
+        color: #fff;
+        transition: 0.3s;
+        line-height: 1.2;
+        }
+
+    .portfolio .portfolio-content .portfolio-info .preview-link:hover,
+    .portfolio .portfolio-content .portfolio-info .details-link:hover {
+        color: var(--accent-color);
+    }
+
+    .portfolio .portfolio-content .portfolio-info .details-link {
+        left: 50%;
+        font-size: 34px;
+        line-height: 0;
+    }
+
+    .portfolio .portfolio-content:hover .portfolio-info {
+        opacity: 1;
+    }
+
+    .portfolio .portfolio-content:hover img {
+        transform: scale(1.1);
+    }
+
+    .social-media-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .section-description {
+        color: #666;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 3rem;
+    }
+    
+    .social-links-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .social-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        transition: transform 0.3s ease;
+        padding: 1rem;
+        border-radius: 10px;
+        min-width: 160px;
+    }
+    
+    .social-link:hover {
+        transform: translateY(-5px);
+    }
+    
+    .social-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .social-link i {
+        font-size: 1.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .social-name {
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+    }
+    
+    /* Twitter Specific Styling */
+    .social-link.twitter {
+        background-color: rgba(29, 161, 242, 0.1);
+    }
+    
+    .twitter .social-icon-wrapper {
+        background-color: #1DA1F2;
+        color: white;
+    }
+    
+    .twitter .social-name {
+        color: #1DA1F2;
+    }
+    
+    .twitter:hover .social-icon-wrapper {
+        background-color: #1a89d0;
+    }
+    
+    /* LinkedIn Specific Styling */
+    .social-link.linkedin {
+        background-color: rgba(0, 119, 181, 0.1);
+    }
+    
+    .linkedin .social-icon-wrapper {
+        background-color: #0077B5;
+        color: white;
+    }
+    
+    .linkedin .social-name {
+        color: #0077B5;
+    }
+    
+    .linkedin:hover .social-icon-wrapper {
+        background-color: #006396;
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .social-link {
+            min-width: 140px;
+        }
+        
+        .social-icon-wrapper {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .social-link i {
+            font-size: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .social-links-wrapper {
+            gap: 1rem;
+        }
+        
+        .social-link {
+            min-width: 120px;
+            padding: 0.8rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <img src="assets/img/logo.png" alt="">
+            <!-- <h1 class="sitename">Ecotrunk</h1> -->
+          </a>
+    
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="about.html#values">Our Values</a></li>
+                  <li><a href="about.html#history">History</a></li>
+                  <li><a href="about.html#covid">Covid-19 Response</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="proj_dev.html#projectDevpt" class="active">Project Development & Management</a></li>
+                  <li><a href="engineering_systems.html#projectDevpt">Engineering Systems Development</a></li>
+                  <li><a href="consultancy.html#consultancy">Consultancy</a></li>
+                  <li><a href="p&sem.html#procurement_supply">Procurement & Supply of Engineering Materials</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Technology</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="technology.html#hydropower">Hydropower</a></li>
+                  <li><a href="technology.html#solar">Solar</a></li>
+                  <li><a href="technology.html#wind">Wind</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Customer</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="customer.html#energy">Energy-dependant Sectors</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Resources</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="media.html">Media Gallery</a></li>
+                  <li><a href="resources.html">Press Releases</a></li>
+                  <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+              </li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+    
+          <a class="btn-getstarted" href="index.html#about">Get Started</a>
+    
+        </div>
+    </header>
+    <main class="main">
+        <!-- Page Title -->
+        <div class="page-title light-background">
+            <!-- <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/img/solar_vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <img src="assets/img/contact-us.jpg" class="hero-video" alt="">
+            
+            <div class="gradient-overlay-pages"></div>
+            <div class="container">
+                <h1>Media Gallery</h1>
+                <nav class="breadcrumbs">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="current">Media</li>
+                </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
+        <!-- Social Media Section -->
+        <section class="social-media-section py-5">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Photo Gallery</h2>
+            </div><!-- End Section Title -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <p class="section-description mb-5">Stay updated with our latest news and updates by following us on social media</p>
+                        
+                        <div class="social-links-wrapper">
+                            <a href="https://twitter.com/yourhandle" class="social-link twitter" target="_blank">
+                                <div class="social-icon-wrapper">
+                                    <i class="bi bi-twitter-x"></i>
+                                </div>
+                                <span class="social-name">Twitter</span>
+                            </a>
+                            
+                            <a href="https://linkedin.com/company/yourcompany" class="social-link linkedin" target="_blank">
+                                <div class="social-icon-wrapper">
+                                    <i class="bi bi-linkedin"></i>
+                                </div>
+                                <span class="social-name">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+            <h2>Photo Gallery</h2>
+            </div><!-- End Section Title -->
+    
+            <div class="container-fluid">
+    
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+        
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">EcoGadgets</li>
+                    <li data-filter=".filter-product">GreenMark</li>
+                    <li data-filter=".filter-branding">RenewLogs</li>
+                    <li data-filter=".filter-books">BatteryStorage</li>
+                    </ul><!-- End Portfolio Filters -->
+        
+                    <div class="row g-0 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/about.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/Construction Materials.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/Construction Materials.jpg" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/solar_panels_in_Africa.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/solar_panels_in_Africa.jpg" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/energy_engineer_and_wind_turbines.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/energy_engineer_and_wind_turbines.jpg" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/windmill.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/windmill.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/eng.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/eng.jpg" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/esd.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/esd.jpg" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/energy-storage.webp" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/energy-storage.webp" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/hydro.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/hydro.jpg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/pmt.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/pmt.jpg" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/solar-pic.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/solar-pic.jpg" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                        <div class="portfolio-content h-100">
+                        <img src="assets/img/pc.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <a href="assets/img/pc.jpg" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                        </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
+        
+                    </div><!-- End Portfolio Container -->
+        
+                </div>
+    
+            </div>
+    
+        </section><!-- /Portfolio Section -->
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container-fluid footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 footer-about">
+                <a href="index.html" class="footer-logo d-flex align-items-center">
+                    <!-- <span class="sitename">Ecotrunk</span> -->
+                    <img src="assets/img/logo.png" alt="" style="height: 230px; width: 100%; border-radius: 10px">
+                </a>
+                </div>
+  
+                <div class="col-lg-2 col-md-3 footer-links">
+                <h4>About us</h4>
+                <ul>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">HSE</a></li>
+                    <li><a href="#">Uncompromising Ethics</a></li>
+                    <li><a href="#">Certificate & recognitions</a></li>
+                </ul>
+                </div>
+  
+                <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Service Provider</h4>
+                <ul>
+                    <!-- <li><a href="#">Development</a></li>
+                    <li><a href="#">Maintenance (O&M)</a></li>
+                    <li><a href="#">Distribution</a></li>
+                    <li><a href="#">Consultancy</a></li> -->
+  
+                    <li><a href="proj_dev.html#projectDevpt">Project Development & Management</a></li>
+                    <li><a href="engineering_systems.html#projectDevpt">Engineering Systems Development</a></li>
+                    <li><a href="consultancy.html#consultancy">Consultancy</a></li>
+                    <li><a href="p&sem.html#procurement_supply">Procurement & Supply of Engineering Materials</a></li>
+  
+                </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-about">
+                <h4>Contact us</h4>
+                <div class="footer-contact">
+                    <p>Ngong Professional Centre, along Ngong Road</p>
+                    <p>P.O Box 13327-00200, Nairobi, Kenya.</p>
+                    <p class="mt-3"><strong>Phone:</strong> <span><a href="tel:+254112818685">0112818685</a> / <a href="tel:+254776711966">0776711966</a></span></p>
+                    <p><strong>Email:</strong> <span><a href="mailto:info@ecotrunk.co.ke">info@ecotrunk.co.ke</a></span></p>
+                </div>
+                <div class="social-links d-flex mt-4">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+                </div>
+  
+                <div class="col-lg-2 col-md-3 footer-links">
+                <h4>Newsletter</h4>
+                <p style="font-weight: 600;">Submit your Email to subscribe to our newsletter</p>
+                <!-- Form -->
+                <div class="footer-form" >
+                    <div id="mc_embed_signup">
+                    <form target="_blank" action="#" method="get" class="subscribe_form relative mail_part">
+                        <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address" class="placeholder" >
+                        <div class="form-icon">
+                        <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><i class="bi bi-send"></i></button>
+                        </div>
+                        <div class="mt-10 info"></div>
+                    </form>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+  
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Ecotrunk</strong> <span>All Rights Reserved</span>
+                Designed by <a href="https://funcorpdevelopers.netlify.app" target="_blank">Fun-Corp Developers
+            </p>
+        </div>
+        </div>
+  
+    </footer>
+  
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!-- Vendor JS Files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Initialize Isotope
+        function initPortfolio() {
+            const portfolios = document.querySelectorAll('.isotope-layout');
+            
+            if (!portfolios.length) return;
+        
+            portfolios.forEach(portfolio => {
+            let portfolioContainer = portfolio.querySelector('.isotope-container');
+            if (!portfolioContainer) return;
+        
+            // Get configuration from data attributes
+            const layout = portfolio.getAttribute('data-layout') || 'masonry';
+            const defaultFilter = portfolio.getAttribute('data-default-filter') || '*';
+        
+            // Initialize Isotope after images are loaded
+            imagesLoaded(portfolioContainer, function() {
+                // Create Isotope instance
+                const iso = new Isotope(portfolioContainer, {
+                itemSelector: '.isotope-item',
+                layoutMode: layout,
+                filter: defaultFilter,
+                transitionDuration: '0.4s',
+                hiddenStyle: {
+                    opacity: 0,
+                    transform: 'scale(0.8)'
+                },
+                visibleStyle: {
+                    opacity: 1,
+                    transform: 'scale(1)'
+                }
+                });
+        
+                // Initialize filter buttons
+                const filterButtons = portfolio.querySelectorAll('.isotope-filters li');
+                filterButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from current active button
+                    portfolio.querySelector('.isotope-filters .filter-active')?.classList.remove('filter-active');
+                    
+                    // Add active class to clicked button
+                    this.classList.add('filter-active');
+                    
+                    // Get filter value and arrange items
+                    const filterValue = this.getAttribute('data-filter');
+                    iso.arrange({
+                    filter: filterValue
+                    });
+        
+                    // Refresh AOS animations if present
+                    if (typeof AOS !== 'undefined') {
+                    AOS.refresh();
+                    }
+                });
+                });
+            });
+            });
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initPortfolio);
+        
+        // Reinitialize on dynamic content changes if needed
+        document.addEventListener('contentChanged', initPortfolio);
+    </script>
+</body>
+</html>
